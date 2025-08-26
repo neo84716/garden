@@ -1,0 +1,21 @@
+.nav-link .ph,
+.nav-link span {
+    fill: $neutral-600;
+    color: $neutral-600;
+}
+
+.nav-link:active .ph,
+.nav-link:active span {
+    fill: $neutral-800;
+    color: $neutral-800;
+}
+
+.nav-item:active {
+    background-color: $neutral-50;
+}
+
+.nav-link.active .ph-fill,
+.nav-link.active span {
+    fill: $primary-600;
+    color: $primary-600;
+}
