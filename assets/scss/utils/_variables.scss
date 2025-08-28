@@ -117,6 +117,7 @@ $neutral-900: #525760;
 $neutral-950: #363A3F;
 $neutral-999: #000000;
 
+$text-primary:#101828;
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -535,7 +536,7 @@ $theme-colors: (
 "neutral-900": $neutral-900,
 "neutral-950": $neutral-950,
 "neutral-999": $neutral-999,
-
+  "text-primary": $text-primary,
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,

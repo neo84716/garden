@@ -1,3 +1,16 @@
+.letter-0 {
+  letter-spacing: 0;
+}
+
+.letter-1 {
+  letter-spacing: 0.15px;
+}
+
+.letter-2 {
+  letter-spacing: 1px;
+}
+
+// header
 .member-logo {
   width: 100px;
   height: 17px;
@@ -7,6 +20,12 @@
   margin-right: 14px;
 }
 
+// 資料設定
+.personal-info .btn {
+  padding: 8px;
+}
+
+// 資料設定 頭貼
 .personal-info .schedule {
   position: absolute;
   bottom: -6px;
@@ -14,10 +33,7 @@
   transform: translateX(-50%);
 }
 
-.personal-info .btn {
-  padding: 8px;
-}
-
+// 資料設定 升級Premium
 .premium {
   font-weight: 700;
   font-size: 24px;
@@ -29,6 +45,7 @@
   border-radius: 12px;
 }
 
+// 資料設定 生活照片
 .selfietitle .ph-fill {
   color: $secondary-500;
 }
@@ -42,3 +59,10 @@
   margin-right: -6px !important; 
   margin-left: -6px !important;
 }
+
+// 關於我
+.text-primary {
+  color: #101828;
+}
+
+// 關於我
