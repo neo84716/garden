@@ -11,9 +11,29 @@
 }
 
 // header
+.member-body {
+ padding-bottom: 72px;
+}
+
+.member-header .container {
+  height: 48px;
+}
+
 .member-logo {
+  line-height: 0;
+}
+
+.member-logo a {
+  background-image: url(/assets/images/logo/logo-dark-h.svg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
   width: 100px;
   height: 17px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 0;
 }
 
 .gear-six {
@@ -65,4 +85,7 @@
   color: #101828;
 }
 
-// 關於我
+// 學習語言
+.text-opacity-80 {
+  opacity: 0.8;
+}

@@ -30,16 +30,10 @@
         <title>會員頁面</title>
     </head>
 
-    <body>
-        <header>
-            <div class="container py-5 d-flex justify-content-between">
-                <a href="#">
-                    <img
-                        src="/assets/images/logo/logo-dark-h.svg"
-                        alt="Logo"
-                        class="member-logo"
-                    />
-                </a>
+    <body class="member-body">
+        <header class="member-header">
+            <div class="container py-5 px-6 d-flex justify-content-between align-items-center">
+                <h1 class="member-logo "><a href="#">Garden</a></h1>
                 <div class="d-flex align-items-center">
                     <a
                         href="#"
@@ -57,7 +51,7 @@
             </div>
         </header>
 
-        <main>
+        <main">
             <div class="container px-6 py-6" >
                 <!-- 資料設定 -->
                 <section class="personal-info mb-6">
@@ -168,9 +162,10 @@
                       </div>
                     </div>
                 </section>
+                
                 <!-- 關於我 -->
                 <section class="mb-6 pb-6">
-                  <h2 class="mb-6 fs-8 py-4 px-6 text-primary-600 bg-primary-50 fw-semibold lh-base letter-0">關於我</h2>
+                  <h2 class="mb-6 fs-8 py-4 px-6 text-primary-600 bg-primary-50 fw-semibold lh-base letter-0 rounded-3">關於我</h2>
                   <!-- 自我介紹 -->
                   <div class="mb-6">
                     <h3 class="mb-4 text-text-primary fs-9 fw-semibold lh-base letter-0">自我介紹</h3>
@@ -225,7 +220,30 @@
                 </section>
 
                 <!-- 學習語言 -->
-                <section></section>
+                <section>
+                    <h2 class="mb-6 fs-8 py-4 px-6 text-primary-600 bg-primary-50 fw-semibold lh-base letter-0 rounded-3">學習語言</h2>
+                    <!-- 目標語言 -->
+                    <div class="mb-6">
+                        <h3 class="mb-4 text-black text-opacity-80 fs-9 fw-semibold letter-0 lh-base">目標語言</h3>
+                        <p class="fs-10 letter-1 neutral-950 lh-base"><span><img src="/assets/images/flag/svg/img_flag_us.svg" alt="美國國旗" class="me-6"></span>英文</p>
+                    </div>
+                    <!-- 等級 -->
+                    <div class="mb-6">
+                        <h3 class="mb-4 text-black text-opacity-80 fs-9 fw-semibold letter-0 lh-base">等級</h3>
+                        <div class="d-flex align-items-center">
+                            <img src="/assets/images/login/img_login_copper.png" alt="銅牌圖示" style="width: 24px;" class="me-6">
+                            <p class="fs-10 letter-1 neutral-950 lh-base">新手</p>
+                        </div>
+                    </div>
+                    <!-- 希望學習程度 -->
+                    <div>
+                        <h3 class="mb-4 text-black text-opacity-80 fs-9 fw-semibold letter-0 lh-base">希望學習到什麼程度</h3>
+                        <div class="d-flex align-items-center">
+                            <img src="/assets/images/login/img_login_gold.png" alt="金牌圖示" style="width: 24px;" class="me-6">
+                            <p class="fs-10 letter-1 neutral-950 lh-base">高手</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </main>
 
