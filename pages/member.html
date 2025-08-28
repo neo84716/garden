@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+        />
+
+        <title>會員頁面</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="container py-5 d-flex justify-content-between">
+                <a href="#">
+                    <img
+                        src="/assets/images/logo/logo-dark-h.svg"
+                        alt="Logo"
+                        class="member-logo"
+                    />
+                </a>
+                <div class="d-flex align-items-center">
+                  <a href="#" class="text-decoration-none gear-six d-flex align-items-center">
+                      <i class="ph ph-gear-six fs-5"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none d-flex align-items-center">
+                      <i class="ph ph-sliders-horizontal fs-5"></i>
+                  </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container py-6">
+                <!-- 個人資料 -->
+                <section class="personal-info mb-6">
+                    <!-- 頭貼 -->
+                    <div class="d-flex mb-6">
+                        <div class="position-relative me-5" style="width: 80px; height: 80px">
+                            <img
+                                src="/assets/images/avatar/md/img_avatar_md16.png"
+                                class="rounded-pill border border-primary-500 border-3"                          
+                                alt="用戶頭像"
+                                
+                            />
+                            <span
+                                class="schedule badge bg-primary-500 text-white rounded-pill p-2 "
+                                style="font-size: 0.625rem; letter-spacing: 1px;"
+                            >
+                                100%
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                          <h5 class="fs-7 fw-semibold lh-base mb-4">
+                            Jamie
+                          </h5>
+                          <div class="d-flex gap-4">
+                            <a href="#" class="btn px-5 btn-neutral-100 lh-1 fs-10 text-neutral-800 rounded-pill d-flex align-items-center"
+                            style="letter-spacing: 0.15px;"
+                            ><i class="ph ph-pencil-simple fs-9 me-2"></i>編輯個人檔案</a>
+                            <a href="#" class="btn px-5 btn-primary-50 lh-1 fs-10 text-primary-600 rounded-pill d-flex align-items-center "
+                            style="letter-spacing: 0.15px;"
+                            ><i class="ph ph-gift fs-9 me-2"></i>獎勵兌換</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- K書中心連結 -->
+                    <div class="d-flex align-items-center py-4 px-5 bg-tertiary-100 rounded-pill">
+                      <img src="/assets/images/member/Book.png" alt="bookicon" class="fs-9">
+                      <p class="fs-11">想找怎樣的人一起學習語言?</p>
+                      <a href="#" class="text-decoration-none">Post!
+                        <i class="ph ph-caret-right"></i>
+                      </a>
+                    </div>
+                </section>
+
+                <!-- 關於我 -->
+                <section class="mb-6"></section>
+
+                <!-- 學習語言 -->
+                <section></section>
+            </div>
+        </main>
+
+        <%- include('./layout/footer'); -%>
+
+        <script type="module" src="../main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
