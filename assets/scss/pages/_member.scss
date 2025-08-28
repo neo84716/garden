@@ -28,3 +28,17 @@
 .upgrade {
   border-radius: 12px;
 }
+
+.selfietitle .ph-fill {
+  color: $secondary-500;
+}
+
+.life-photo {
+  min-width: 100px;
+  border-radius: 8px;
+}
+
+.selfie .row {
+  margin-right: -6px !important; 
+  margin-left: -6px !important;
+}
