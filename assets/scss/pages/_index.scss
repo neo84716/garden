@@ -1,0 +1,43 @@
+.dislike-icon {
+    top: -40px;
+    left: 48px;
+    cursor: pointer;
+}
+
+.star-icon {
+    top: -40px;
+    left: calc(50% - 32px);
+    cursor: pointer;
+}
+
+.heart-icon {
+    top: -40px;
+    right: 48px;
+    cursor: pointer;
+}
+
+.icon-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.icon-visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.card-stack {
+    height: 614px;
+    position: relative;
+}
+
+.card {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center;
+}
+
+.card.animate-dislike {
+    transform: translateX(456px) rotate(8deg);
+    opacity: 0;
+}
