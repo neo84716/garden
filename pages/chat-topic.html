@@ -179,14 +179,15 @@
                     <div class="d-flex align-items-center">
                         <div
                             class="input-group flex-grow-1 bg-neutral-100 px-5 py-3"
-                            style="border-radius: 20px"
+                            style="border-radius: 12px"
                         >
-                            <input
-                                type="text"
+                            <textarea
                                 id="mainInput"
-                                class="form-control border-0 bg-transparent p-0 fs-10 letter-1 text-neutral-800"
+                                class="form-control border-0 bg-transparent  fs-10 letter-1 text-neutral-800 chat-input"
                                 placeholder="輸入訊息"
-                            />
+                                rows="1"
+                                style="resize: none; overflow-y: hidden"
+                            ></textarea>
                             <div
                                 class="input-group-text bg-transparent border-0"
                             >
@@ -227,7 +228,12 @@
                     <div
                         class="modal-header p-0 border-0 d-flex align-items-center justify-content-between"
                     >
-                        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close">
+                        <button
+                            type="button"
+                            class="btn p-0"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        >
                             <i class="ph ph-x fs-6 p-5"></i>
                         </button>
                         <h2
@@ -285,7 +291,7 @@
                             <div class="col px-4 text-center mb-6">
                                 <div
                                     class="topic-card"
-                                    data-text="What's a dish you would recommend for me to try"
+                                    data-text="What's a dish you would recommend?"
                                 >
                                     <img
                                         src="/assets/images/topic/img_topic.png"
@@ -304,7 +310,7 @@
                             <div class="col px-4 text-center">
                                 <div
                                     class="topic-card"
-                                    data-text="What's a recent news story that has caught your attention?"
+                                    data-text="What's a recent news story?"
                                 >
                                     <img
                                         src="/assets/images/topic/img_topic-5.png"
@@ -323,7 +329,7 @@
                             <div class="col px-4 text-center">
                                 <div
                                     class="topic-card"
-                                    data-text="If you could travel anywhere in the world right now, where would you go"
+                                    data-text="Where is your favorite place in the world?"
                                 >
                                     <img
                                         src="/assets/images/topic/img_topic-4.png"
@@ -383,8 +389,9 @@
                             <button
                                 id="confirmButton"
                                 class="btn text-white btn-primary-600 w-100 rounded-pill"
-                                >確認</button
                             >
+                                確認
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -393,9 +400,7 @@
 
         <script type="module" src="../main.js"></script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
-        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
@@ -403,33 +408,55 @@
         ></script>
         <script>
             AOS.init();
-            
+        </script>
+        <script>
             const topicCards = document.querySelectorAll(".topic-card");
             const questionInput = document.getElementById("questionInput");
             const mainInput = document.getElementById("mainInput");
             const confirmButton = document.getElementById("confirmButton");
-            
-            // 實例化 Bootstrap Modal，方便後續操作
-            const topicModal = new bootstrap.Modal(document.getElementById('topicModal'));
 
+            // 實例化 Bootstrap Modal，必須在 Bootstrap 腳本之後
+            const topicModal = new bootstrap.Modal(
+                document.getElementById("topicModal")
+            );
+
+            // 在網頁載入時，讀取預設選中的主題卡片，並設定其值
+            const defaultTopic = document.querySelector(
+                ".topic-card.topic-active-option"
+            );
+            if (defaultTopic) {
+                questionInput.value = defaultTopic.getAttribute("data-text");
+            }
+
+            // 為所有主題卡片添加點擊事件監聽器
             topicCards.forEach((card) => {
                 card.addEventListener("click", function () {
+                    // 移除所有主題卡片的「被選中」樣式
                     topicCards.forEach((item) => {
                         item.classList.remove("topic-active-option");
                     });
 
+                    // 為被點擊的卡片添加「被選中」樣式
                     this.classList.add("topic-active-option");
+
+                    // 將卡片上的預設文字賦予給彈出視窗的輸入框
                     const selectedText = this.getAttribute("data-text");
                     questionInput.value = selectedText;
                 });
             });
 
             // 為「確認」按鈕添加點擊事件監聽器
-            confirmButton.addEventListener('click', function() {
-                // 將 Modal 輸入框的值賦予給主畫面的輸入框
+            confirmButton.addEventListener("click", function () {
+                // 將彈出視窗輸入框的值賦予給主畫面的輸入框
                 mainInput.value = questionInput.value;
-                
-                // 隱藏 Modal 視窗
+
+                 setTimeout(() => {
+        // 這段程式碼與您原本的自動擴展邏輯相同
+        mainInput.style.height = 'auto';
+        mainInput.style.height = (mainInput.scrollHeight) + 'px';
+    }, 0); // 延遲時間設為 0，能確保它在當前執行堆疊結束後立即運行
+
+                // 隱藏彈出視窗
                 topicModal.hide();
             });
         </script>

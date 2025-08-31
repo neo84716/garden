@@ -47,6 +47,9 @@
     border-color: $primary-600;
 }
 
-
-
-
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    line-height: normal;
+}
