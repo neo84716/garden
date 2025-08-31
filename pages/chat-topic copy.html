@@ -416,134 +416,132 @@
 
         <script>
             // 選擇所有需要的 DOM 元素
-const topicCards = document.querySelectorAll(".topic-card");
-const questionInput = document.getElementById("questionInput");
-const mainInput = document.getElementById("mainInput");
-const confirmButton = document.getElementById("confirmButton");
-const sendButton = document.getElementById("sendButton");
-const chatTopic = document.querySelector(".chat-topic");
+            const topicCards = document.querySelectorAll(".topic-card");
+            const questionInput = document.getElementById("questionInput");
+            const mainInput = document.getElementById("mainInput");
+            const confirmButton = document.getElementById("confirmButton");
+            const sendButton = document.getElementById("sendButton");
+            const chatTopic = document.querySelector(".chat-topic");
 
-// 實例化 Bootstrap Modal
-const topicModal = new bootstrap.Modal(
-    document.getElementById("topicModal")
-);
+            // 實例化 Bootstrap Modal
+            const topicModal = new bootstrap.Modal(
+                document.getElementById("topicModal")
+            );
 
-// 網頁載入時的預設值設定
-const defaultTopic = document.querySelector(
-    ".topic-card.topic-active-option"
-);
-if (defaultTopic) {
-    questionInput.value = defaultTopic.getAttribute("data-text");
-}
+            // 網頁載入時的預設值設定
+            const defaultTopic = document.querySelector(
+                ".topic-card.topic-active-option"
+            );
+            if (defaultTopic) {
+                questionInput.value = defaultTopic.getAttribute("data-text");
+            }
 
-// 主題卡片點擊事件
-topicCards.forEach((card) => {
-    card.addEventListener("click", function () {
-        topicCards.forEach((item) => {
-            item.classList.remove("topic-active-option");
-        });
-        this.classList.add("topic-active-option");
-        const selectedText = this.getAttribute("data-text");
-        questionInput.value = selectedText;
-    });
-});
+            // 主題卡片點擊事件
+            topicCards.forEach((card) => {
+                card.addEventListener("click", function () {
+                    // 移除所有主題卡片的「被選中」樣式
+                    topicCards.forEach((item) => {
+                        item.classList.remove("topic-active-option");
+                    });
 
-// 確認按鈕點擊事件 (將文字從彈出視窗轉移到主輸入框)
-confirmButton.addEventListener("click", function () {
-    mainInput.value = questionInput.value;
-    const event = new Event("input", { bubbles: true });
-    mainInput.dispatchEvent(event);
-    topicModal.hide();
-});
+                    // 為被點擊的卡片添加「被選中」樣式
+                    this.classList.add("topic-active-option");
 
-/**
- * 創建一個新的訊息氣泡元素 (不包含時間戳記)
- * @param {string} text - 訊息的文字內容
- * @param {string} sender - 訊息的發送者 ('user' 或 'ai')
- * @returns {HTMLElement} - 創建好的訊息氣泡元素
- */
-function createMessage(text, sender) {
-    // 創建最外層的容器 <div class="dialog-box mb-3">
-    const dialogBox = document.createElement("div");
-    dialogBox.classList.add("dialog-box", "mb-3");
+                    // 將卡片上的預設文字賦予給彈出視窗的輸入框
+                    const selectedText = this.getAttribute("data-text");
+                    questionInput.value = selectedText;
+                });
+            });
 
-    // 創建訊息內容的 <p> 標籤
-    const messageParagraph = document.createElement("p");
-    messageParagraph.classList.add("message-box", "fs-10", "letter-1", "mb-4");
-    messageParagraph.textContent = text;
-    
-    // 根據發送者決定樣式和結構
-    if (sender === 'user') {
-        // 使用者訊息：靠右對齊，淺綠色氣泡
-        dialogBox.classList.add("d-flex", "justify-content-end");
-        messageParagraph.style.backgroundColor = "#6ee7b7"; // 自定義顏色
-        messageParagraph.style.borderBottomRightRadius = "4px";
+            // 確認按鈕點擊事件 (將文字從彈出視窗轉移到主輸入框)
+            confirmButton.addEventListener("click", function () {
+                // 將彈出視窗輸入框的值賦予給主畫面的輸入框
+                mainInput.value = questionInput.value;
 
-        // 創建第二層的容器 <div class="d-flex flex-column">
-        const contentContainer = document.createElement("div");
-        contentContainer.classList.add(
-            "d-flex",
-            "flex-column",
-            "me-6", // 讓氣泡與右側有間距
-            "align-items-end"
-        );
+                // 創建並觸發 'input' 事件，以確保 textarea 自動擴展
+                const event = new Event("input", {
+                    bubbles: true,
+                });
+                mainInput.dispatchEvent(event);
 
-        // 將 p 標籤添加到第二層容器中
-        contentContainer.appendChild(messageParagraph);
-        dialogBox.appendChild(contentContainer);
+                // 隱藏彈出視窗
+                topicModal.hide();
+            });
 
-    } else if (sender === 'ai') {
-        // AI 訊息：靠左對齊，淡藍色氣泡，帶頭像
-        // 在這裡添加 AI 訊息的邏輯
-    }
-    
-    return dialogBox;
-}
-// 發送按鈕點擊事件 (將文字顯示在對話視窗)
-sendButton.addEventListener("click", function () {
-    const messageText = mainInput.value.trim();
-    if (messageText === "") {
-        return;
-    }
+            function createMessage(text, sender) {
+                // 創建最外層的容器 <div class="dialog-box mb-3">
+                const dialogBox = document.createElement("div");
+                dialogBox.classList.add("dialog-box", "mb-3", "ms-13");
 
-    // 步驟 1: 移除所有舊的時間戳記
-    const oldTimestamps = chatTopic.querySelectorAll('time');
-    oldTimestamps.forEach(ts => ts.remove());
+                // 創建訊息內容的 <p> 標籤
+                const messageParagraph = document.createElement("p");
+                messageParagraph.classList.add(
+                    "message-box",
+                    "fs-10",
+                    "letter-1",
+                    "mb-4"
+                );
+                messageParagraph.textContent = text;
 
-    // 步驟 2: 創建新的訊息氣泡
-    const userMessage = createMessage(messageText, "user");
+                // 獲取當前時間並格式化
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const formattedTime = `下午${hours}:${
+                    minutes < 10 ? "0" : ""
+                }${minutes}`;
 
-    // 步驟 3: 創建時間戳記元素
-    const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const formattedTime = `下午${hours}:${minutes < 10 ? "0" : ""}${minutes}`;
-    
-    const timeElement = document.createElement("time");
-    timeElement.classList.add(
-        "text-neutral-600",
-        "fs-11",
-        "letter-1"
-    );
-    timeElement.style.lineHeight = "1.4";
-    timeElement.textContent = formattedTime;
+                // 創建時間的 <time> 標籤
+                const timeElement = document.createElement("time");
+                timeElement.classList.add(
+                    "text-neutral-600",
+                    "fs-11",
+                    "letter-1"
+                );
+                timeElement.style.lineHeight = "1.4";
+                timeElement.textContent = formattedTime;
 
-    // 步驟 4: 找到新訊息的內容容器，並將時間戳記加進去
-    const lastMessageContainer = userMessage.querySelector('.d-flex.flex-column');
-    if (lastMessageContainer) {
-        lastMessageContainer.appendChild(timeElement);
-    }
-    
-    // 將新訊息添加到聊天記錄中
-    chatTopic.appendChild(userMessage);
+                // 根據發送者決定樣式和結構
+                // 使用者訊息：靠右對齊，淺綠色氣泡
+                dialogBox.classList.add("d-flex", "justify-content-end");
+                messageParagraph.style.backgroundColor = "#6ee7b7"; // 自定義顏色
+                messageParagraph.style.borderBottomRightRadius = "4px";
 
-    // 清空輸入框並重置高度
-    mainInput.value = "";
-    mainInput.style.height = "auto";
+                // 創建第二層的容器 <div class="d-flex flex-column">
+                const contentContainer = document.createElement("div");
+                contentContainer.classList.add(
+                    "d-flex",
+                    "flex-column",
+                    "me-6",
+                    "align-items-end"
+                );
 
-    // 讓畫面自動滾動到最底部
-    chatTopic.scrollTop = chatTopic.scrollHeight;
-});
+                // 將 p 和 time 標籤添加到第二層容器中
+                contentContainer.appendChild(messageParagraph);
+                contentContainer.appendChild(timeElement);
+                dialogBox.appendChild(contentContainer);
+
+                return dialogBox;
+            }
+
+            // 發送按鈕點擊事件 (將文字顯示在對話視窗)
+            sendButton.addEventListener("click", function () {
+                const messageText = mainInput.value.trim();
+                if (messageText === "") {
+                    return;
+                }
+
+                // 呼叫新函式來創建使用者訊息氣泡
+                const userMessage = createMessage(messageText, "user");
+                chatTopic.appendChild(userMessage);
+
+                // 清空輸入框並重置高度
+                mainInput.value = "";
+                mainInput.style.height = "auto";
+
+                // 讓畫面自動滾動到最底部
+                chatTopic.scrollTop = chatTopic.scrollHeight;
+            });
         </script>
     </body>
 </html>
