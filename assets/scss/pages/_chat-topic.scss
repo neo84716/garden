@@ -1,0 +1,17 @@
+.chat-topic {
+  
+  .dialog-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 136px;
+  }
+
+  .message-box {
+    border-radius: 12px;
+    padding: 8px 12px;
+    background-color: $secondary-100;
+    display: inline-block; 
+  }
+
+} 
