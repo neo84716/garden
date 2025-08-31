@@ -25,3 +25,25 @@
         linear-gradient(0deg, rgba(255, 255, 255, .3), rgba(255, 255, 255, .3)),
         linear-gradient(0deg, #9DBE92 0%, #046144 100%);
 }
+
+.game-card{
+    max-width: 100%;
+    min-height: 160px;
+
+    position: relative;
+
+    .game-img{
+        width: 240px;
+        height: 160px;
+
+        position: absolute;
+        left: calc(50% - 85px);
+        top: 0;
+    }
+
+    .game-tag{
+        position: absolute;
+        left: 16px;
+        bottom: 12px;
+    }
+}
