@@ -235,8 +235,10 @@
                 >
                     <div
                         class="modal-header p-0 border-0 d-flex align-items-center justify-content-between"
-                    >
-                        <i class="ph ph-x fs-6 p-5"></i>
+                    >   
+                        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="ph ph-x fs-6 p-5"></i>
+                        </button>
                         <h2
                             class="fs-8 fw-semibold lh-base letter-0 w-100 text-center m-0"
                         >
@@ -245,15 +247,18 @@
                         <i class="ph ph-x fs-6 p-5 invisible"></i>
                     </div>
 
-                    <div class="modal-body pt-0">
+                    <div class="modal-body pt-0 px-4">
                         <!-- 主題選擇 -->
                         <div
-                            class="row row-cols-3 text-neutral-950"
+                            class="row row-cols-3 text-neutral-950 mb-6"
                             id="topicOptions"
                             style="margin-right: -8px; margin-left: -8px"
                         >
                             <div class="col px-4 text-center mb-6">
-                                <div class="topic-card topic-active-option">
+                                <div
+                                    class="topic-card topic-active-option"
+                                    data-text="How do you define a meaningful life?"
+                                >
                                     <img
                                         src="/assets/images/topic/img_topic-1.png"
                                         alt="生活與價值icon"
@@ -269,7 +274,10 @@
                                 </div>
                             </div>
                             <div class="col px-4 text-center mb-6">
-                                <div class="topic-card">
+                                <div
+                                    class="topic-card"
+                                    data-text="What is your favorite festival?"
+                                >
                                     <img
                                         src="/assets/images/topic/img_topic-3.png"
                                         alt="節慶與傳統icon"
@@ -285,7 +293,10 @@
                                 </div>
                             </div>
                             <div class="col px-4 text-center mb-6">
-                                <div class="topic-card">
+                                <div
+                                    class="topic-card"
+                                    data-text="What's a dish you would recommend for me to try"
+                                >
                                     <img
                                         src="/assets/images/topic/img_topic.png"
                                         alt="飲食與健康icon"
@@ -301,7 +312,10 @@
                                 </div>
                             </div>
                             <div class="col px-4 text-center">
-                                <div class="topic-card">
+                                <div
+                                    class="topic-card"
+                                    data-text="What's a recent news story that has caught your attention?"
+                                >
                                     <img
                                         src="/assets/images/topic/img_topic-5.png"
                                         alt="媒體與時事icon"
@@ -317,7 +331,10 @@
                                 </div>
                             </div>
                             <div class="col px-4 text-center">
-                                <div class="topic-card">
+                                <div
+                                    class="topic-card"
+                                    data-text="If you could travel anywhere in the world right now, where would you go"
+                                >
                                     <img
                                         src="/assets/images/topic/img_topic-4.png"
                                         alt="旅遊與風景icon"
@@ -333,7 +350,10 @@
                                 </div>
                             </div>
                             <div class="col px-4 text-center">
-                                <div class="topic-card">
+                                <div
+                                    class="topic-card"
+                                    data-text="What kind of music do you like?"
+                                >
                                     <img
                                         src="/assets/images/topic/img_topic-2.png"
                                         alt="娛樂與流行icon"
@@ -349,6 +369,34 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 輸入 -->
+                        <div
+                            class="input-group flex-grow-1 bg-neutral-100 px-5 py-3 mb-6"
+                            style="border-radius: 12px"
+                        >
+                            <input
+                                type="text"
+                                id="questionInput"
+                                class="form-control border-0 bg-transparent p-0 fs-10 letter-1 text-neutral-800"
+                                placeholder="How do you define a meaningful life?"
+                            />
+                            <div
+                                class="input-group-text p-0 m-0 bg-transparent border-0"
+                            >
+                                <button
+                                    class="btn btn-sm text-neutral-950 p-1 border-0"
+                                >
+                                    <i class="ph ph-shuffle fs-7"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 確認按鈕 -->
+                        <div>
+                            <buttn
+                                class="btn text-white btn-primary-600 w-100 rounded-pill"
+                                >確認</buttn
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -357,30 +405,21 @@
         <script type="module" src="../main.js"></script>
 
         <script>
-            const topicOptionsContainer =
-                document.getElementById("topicOptions");
             const topicCards = document.querySelectorAll(".topic-card");
-            const defaultCard = document.querySelector(
-                ".topic-card.topic-active-option"
-            );
+            const questionInput = document.getElementById("questionInput");
 
-            // 監聽滑鼠進入任何一個主題卡片
-            topicOptionsContainer.addEventListener(
-                "mouseenter",
-                function (event) {
-                    const hoveredCard = event.target.closest(".topic-card");
+            topicCards.forEach((card) => {
+                card.addEventListener("click", function () {
+                    topicCards.forEach((item) => {
+                        item.classList.remove("topic-active-option");
+                    });
 
-                    if (hoveredCard) {
-                        topicCards.forEach((card) => {
-                            card.classList.remove("topic-active-option");
-                        });
-                    }
-                },
-                true
-            );
+                    this.classList.add("topic-active-option");
 
-            topicOptionsContainer.addEventListener("mouseleave", function () {
-                defaultCard.classList.add("topic-active-option");
+                    const selectedText = this.getAttribute("data-text");
+
+                    questionInput.value = selectedText;
+                });
             });
         </script>
 
