@@ -1,29 +1,97 @@
-<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+        />
+        <title>話題聊天</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-    <title>話題聊天</title>
-</head>
+    <body>
+        <header>
+            <div
+                class="chat-header d-flex justify-content-between align-items-center mb-4"
+            >
+                <!-- header-left -->
+                <div class="d-flex align-items-center">
+                    <!-- 返回按鈕 -->
+                    <a class="btn text-neutral-950 border-0 lh-1 p-5">
+                        <i class="ph ph-caret-left fs-6"></i>
+                    </a>
+                    <!-- 聊天對象 -->
+                    <div class="d-flex">
+                        <!-- 頭像 -->
+                        <div>
+                            <div class="position-relative me-6">
+                                <img
+                                    src="/assets/images/avatar/md/img_avatar_md08.png"
+                                    class="rounded-circle"
+                                    style="width: 36px;"
+                                    alt="Elena 頭貼照"
+                                />
+                                <!-- 勾勾圖示(上) + 白色背景(底) -->
+                                <i class="ph-fill ph-seal-check fs-9 text-accent-600 position-absolute"
+                                style="bottom: -3px; right: -3px; z-index: 2;"></i>
+                                <i class="ph-fill ph-seal fs-9 text-white position-absolute"
+                                style="bottom: -3px; right: -3px; z-index: 1;"></i>
+                            </div>   
+                        </div>
+                        <!-- 名字 + 在線  -->
+                        <div>
+                            <h1 class="fs-9 letter-0 lh-base fw-semibold">Elena</h1>
+                            <div class="d-flex align-items-center">
+                                <span class="d-inline-block bg-success-500 rounded-pill p-2 me-2" 
+                                style="margin-right: 4.5px;"></span>
+                                <span class="fs-11 letter-2"
+                                style="line-height: 1.4;">線上</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+                <!-- header-right -->
+                <div>
+                    <a class="btn border-0 lh-1 p-5">
+                        <i class="ph-fill ph-phone text-primary-600 fs-6"></i>
+                    </a>
+                    <a class="btn border-0 lh-1 p-5">
+                        <i class="ph-fill ph-video-camera text-primary-600 fs-6"></i>
+                    </a>
+                </div>
+            </div>    
+        </header>
+        <main>
+            
+        </main>
 
-<body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        <script type="module" src="../main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"
+        ></script>
         <script>
             AOS.init();
         </script>
-</body>
-
+    </body>
 </html>
