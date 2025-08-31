@@ -7,6 +7,7 @@
 .chat-topic {
     max-width: 640px;
     margin: 0 auto;
+  
   .dialog-box {
     display: flex;
     flex-direction: column;
@@ -52,4 +53,11 @@
     align-items: center;
     padding: 8px 12px;
     line-height: normal;
+}
+
+.chat-topic .dialog-box {
+  display: flex; /* 確保 Flexbox 樣式應用 */
+  /* 移除 max-width，讓氣泡可以自由對齊 */
+  min-width: 136px;
+  max-width: 500px;
 }
