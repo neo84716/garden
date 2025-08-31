@@ -30,11 +30,15 @@
     <body class="chat-body">
         <header class="chat-header fixed-top bg-white">
             <div class="d-flex justify-content-between align-items-center mb-4">
+                <!-- header-left -->
                 <div class="d-flex align-items-center">
+                    <!-- 返回按鈕 -->
                     <a class="btn text-neutral-950 border-0 lh-1 p-5">
                         <i class="ph ph-caret-left fs-6"></i>
                     </a>
+                    <!-- 聊天對象 -->
                     <div class="d-flex">
+                        <!-- 頭像 -->
                         <div>
                             <div class="position-relative me-6">
                                 <img
@@ -43,6 +47,7 @@
                                     style="width: 36px"
                                     alt="Elena 頭貼照"
                                 />
+                                <!-- 勾勾圖示(上) + 白色背景(底) -->
                                 <i
                                     class="ph-fill ph-seal-check fs-9 text-accent-600 position-absolute"
                                     style="
@@ -61,6 +66,7 @@
                                 ></i>
                             </div>
                         </div>
+                        <!-- 名字 + 在線  -->
                         <div>
                             <h1 class="fs-9 letter-0 lh-base fw-semibold">
                                 Elena
@@ -79,6 +85,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- header-right -->
                 <div>
                     <a class="btn border-0 lh-1 p-5">
                         <i class="ph-fill ph-phone text-primary-600 fs-6"></i>
@@ -95,6 +102,7 @@
         <main class="chat-topic" style="padding-top: 56px">
             <div class="px-6">
                 <div class="py-6 border-top">
+                    <!-- 對方對話 -->
                     <div class="d-flex align-items-end gap-4">
                         <img
                             src="/assets/images/avatar/md/img_avatar_md08.png"
@@ -139,6 +147,7 @@
         <footer class="chat-footer fixed-bottom bg-white">
             <div class="px-6">
                 <div class="py-5 border-top">
+                    <!-- 功能區塊 -->
                     <div class="d-flex gap-4 mb-5">
                         <button
                             class="btn px-5 py-4 text-neutral-950 d-flex me-2"
@@ -176,6 +185,7 @@
                             </h2>
                         </button>
                     </div>
+                    <!-- 輸入訊息 -->
                     <div class="d-flex align-items-center">
                         <div
                             class="input-group flex-grow-1 bg-neutral-100 px-5 py-3"
@@ -183,7 +193,6 @@
                         >
                             <input
                                 type="text"
-                                id="mainInput"
                                 class="form-control border-0 bg-transparent p-0 fs-10 letter-1 text-neutral-800"
                                 placeholder="輸入訊息"
                             />
@@ -226,7 +235,7 @@
                 >
                     <div
                         class="modal-header p-0 border-0 d-flex align-items-center justify-content-between"
-                    >
+                    >   
                         <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close">
                             <i class="ph ph-x fs-6 p-5"></i>
                         </button>
@@ -239,6 +248,7 @@
                     </div>
 
                     <div class="modal-body pt-0 px-4">
+                        <!-- 主題選擇 -->
                         <div
                             class="row row-cols-3 text-neutral-950 mb-6"
                             id="topicOptions"
@@ -359,6 +369,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- 輸入 -->
                         <div
                             class="input-group flex-grow-1 bg-neutral-100 px-5 py-3 mb-6"
                             style="border-radius: 12px"
@@ -379,11 +390,11 @@
                                 </button>
                             </div>
                         </div>
+                        <!-- 確認按鈕 -->
                         <div>
-                            <button
-                                id="confirmButton"
+                            <buttn
                                 class="btn text-white btn-primary-600 w-100 rounded-pill"
-                                >確認</button
+                                >確認</buttn
                             >
                         </div>
                     </div>
@@ -393,24 +404,9 @@
 
         <script type="module" src="../main.js"></script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
-        ></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-            crossorigin="anonymous"
-        ></script>
         <script>
-            AOS.init();
-            
             const topicCards = document.querySelectorAll(".topic-card");
             const questionInput = document.getElementById("questionInput");
-            const mainInput = document.getElementById("mainInput");
-            const confirmButton = document.getElementById("confirmButton");
-            
-            // 實例化 Bootstrap Modal，方便後續操作
-            const topicModal = new bootstrap.Modal(document.getElementById('topicModal'));
 
             topicCards.forEach((card) => {
                 card.addEventListener("click", function () {
@@ -419,19 +415,22 @@
                     });
 
                     this.classList.add("topic-active-option");
+
                     const selectedText = this.getAttribute("data-text");
+
                     questionInput.value = selectedText;
                 });
             });
+        </script>
 
-            // 為「確認」按鈕添加點擊事件監聽器
-            confirmButton.addEventListener('click', function() {
-                // 將 Modal 輸入框的值賦予給主畫面的輸入框
-                mainInput.value = questionInput.value;
-                
-                // 隱藏 Modal 視窗
-                topicModal.hide();
-            });
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            AOS.init();
         </script>
     </body>
 </html>
