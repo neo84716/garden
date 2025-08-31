@@ -1,0 +1,56 @@
+.game_loading {
+    position: relative;
+    min-height: 100dvh;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("../images/bg/img_bg_101.png") center/cover no-repeat;
+        filter: blur(18px);
+        transform: scale(1.2);
+        z-index: -1;
+    }
+
+    .match-layout {
+        
+        margin-bottom: 120.5px;
+        .user {
+            height: 160px;
+
+            .user-img {
+                width: 120px;
+                height: 120px;
+                max-width: none;
+                object-fit: cover;
+                display: block;
+            }
+
+
+            position: relative;
+
+            .user-you {
+                position: absolute;
+                left: calc(50% - 116px);
+
+            }
+
+            .user-mask {
+                position: absolute;
+                left: calc(50% - 4px);
+            }
+        }
+    }
+
+    .match-cancel{
+        display: block;
+        cursor: pointer;
+    }
+    
+}
+
+.img-loading {
+    width: 48px;
+    margin-bottom: 120.5px;
+}
