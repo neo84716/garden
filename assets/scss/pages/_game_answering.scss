@@ -1,0 +1,22 @@
+.question-panel {
+    .title-number {
+        padding-left: 54.5px;
+        padding-right: 54.5px;
+    }
+
+    .player-info {
+        img {
+            width: 96px;
+
+            &.blur {
+                filter: blur(4px);
+            }
+        }
+    }
+
+    // .question-body {
+
+    // }
+
+
+}
