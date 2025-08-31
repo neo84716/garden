@@ -5,7 +5,9 @@
 @import "bootstrap/scss/utilities/api";
 
 @import "./base/base";
+@import "./component/button";
 
 @import "./layout/footer";
 @import './pages/index.scss';
 @import './pages/chat.scss';
+@import './pages/match.scss';
