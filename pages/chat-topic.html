@@ -27,7 +27,7 @@
         <title>話題聊天</title>
     </head>
 
-    <body>
+    <body class="chat-body">
         <header>
             <div
                 class="chat-header d-flex justify-content-between align-items-center mb-4"
@@ -46,63 +46,183 @@
                                 <img
                                     src="/assets/images/avatar/md/img_avatar_md08.png"
                                     class="rounded-circle"
-                                    style="width: 36px;"
+                                    style="width: 36px"
                                     alt="Elena 頭貼照"
                                 />
                                 <!-- 勾勾圖示(上) + 白色背景(底) -->
-                                <i class="ph-fill ph-seal-check fs-9 text-accent-600 position-absolute"
-                                style="bottom: -3px; right: -3px; z-index: 2;"></i>
-                                <i class="ph-fill ph-seal fs-9 text-white position-absolute"
-                                style="bottom: -3px; right: -3px; z-index: 1;"></i>
-                            </div>   
+                                <i
+                                    class="ph-fill ph-seal-check fs-9 text-accent-600 position-absolute"
+                                    style="
+                                        bottom: -3px;
+                                        right: -3px;
+                                        z-index: 2;
+                                    "
+                                ></i>
+                                <i
+                                    class="ph-fill ph-seal fs-9 text-white position-absolute"
+                                    style="
+                                        bottom: -3px;
+                                        right: -3px;
+                                        z-index: 1;
+                                    "
+                                ></i>
+                            </div>
                         </div>
                         <!-- 名字 + 在線  -->
                         <div>
-                            <h1 class="fs-9 letter-0 lh-base fw-semibold">Elena</h1>
+                            <h1 class="fs-9 letter-0 lh-base fw-semibold">
+                                Elena
+                            </h1>
                             <div class="d-flex align-items-center">
-                                <span class="d-inline-block bg-success-500 rounded-pill p-2 me-2" 
-                                style="margin-right: 4.5px;"></span>
-                                <span class="fs-11 letter-2"
-                                style="line-height: 1.4;">線上</span>
+                                <span
+                                    class="d-inline-block bg-success-500 rounded-pill p-2 me-2"
+                                    style="margin-right: 4.5px"
+                                ></span>
+                                <span
+                                    class="fs-11 letter-2"
+                                    style="line-height: 1.4"
+                                    >線上</span
+                                >
                             </div>
                         </div>
                     </div>
-                </div>        
+                </div>
                 <!-- header-right -->
                 <div>
                     <a class="btn border-0 lh-1 p-5">
                         <i class="ph-fill ph-phone text-primary-600 fs-6"></i>
                     </a>
                     <a class="btn border-0 lh-1 p-5">
-                        <i class="ph-fill ph-video-camera text-primary-600 fs-6"></i>
+                        <i
+                            class="ph-fill ph-video-camera text-primary-600 fs-6"
+                        ></i>
                     </a>
                 </div>
-            </div>    
+            </div>
         </header>
-        
+
         <main class="chat-topic">
-            <div class="container-fluid p-6">
-                <!-- 對方對話 -->
-                <div class="d-flex align-items-end gap-4">
-                    <img src="/assets/images/avatar/md/img_avatar_md08.png" class="rounded-pill flex-shrink-0" style="width: 28px; height: 28px;margin-bottom: 22px;" alt="Elena 頭貼照">
-                    <div class="pe-13 dialog-box">
-                        <div class=" mb-4">
-                            <p class="message-box fs-10 letter-1">Hello!</p>
-                        </div>
-                        <div class=" mb-4">
-                            <p class="message-box fs-10 letter-1">I'm excited to practice languages with you!</p>
-                        </div>
-                        <div class="d-flex flex-column">
-                            <p class="message-box fs-10 letter-1 mb-4" style="border-bottom-left-radius:4px">Hello! I'm excited to practice languages with you!</p>
-                            <time class="text-start text-neutral-600 fs-11 letter-1" datetime="16:02" style="line-height: 1.4;">下午4:02</time>
+            <div class="px-6">
+                <div class="py-6 border-top">
+                    <!-- 對方對話 -->
+                    <div class="d-flex align-items-end gap-4">
+                        <img
+                            src="/assets/images/avatar/md/img_avatar_md08.png"
+                            class="rounded-pill flex-shrink-0"
+                            style="
+                                width: 28px;
+                                height: 28px;
+                                margin-bottom: 22px;
+                            "
+                            alt="Elena 頭貼照"
+                        />
+                        <div class="pe-13 dialog-box">
+                            <div class="mb-4">
+                                <p class="message-box fs-10 letter-1">Hello!</p>
+                            </div>
+                            <div class="mb-4">
+                                <p class="message-box fs-10 letter-1">
+                                    I'm excited to practice languages with you!
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p
+                                    class="message-box fs-10 letter-1 mb-4"
+                                    style="border-bottom-left-radius: 4px"
+                                >
+                                    Hello! I'm excited to practice languages
+                                    with you!
+                                </p>
+                                <time
+                                    class="text-start text-neutral-600 fs-11 letter-1"
+                                    datetime="16:02"
+                                    style="line-height: 1.4"
+                                    >下午4:02</time
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <footer>
-
+        <footer class="chat-footer fixed-bottom bg-white">
+            <div class="px-6">
+                <div class="py-5 border-top">
+                    <!-- 功能區塊 -->
+                    <div class="d-flex gap-4 mb-5">
+                        <button
+                            class="btn px-5 py-4 text-neutral-950 d-flex me-2"
+                        >
+                            <i class="ph ph-globe-simple me-2"></i>
+                            <h2
+                                class="fs-11 fw-normal letter-1"
+                                style="line-height: 1.4"
+                            >
+                                即時翻譯
+                            </h2>
+                        </button>
+                        <button
+                            class="btn px-5 py-4 text-neutral-950 d-flex me-auto"
+                        >
+                            <i class="ph-fill ph-pencil-simple me-2"></i>
+                            <h2
+                                class="fs-11 fw-normal letter-1"
+                                style="line-height: 1.4"
+                            >
+                                文法修正
+                            </h2>
+                        </button>
+                        <button class="btn px-5 py-4 text-neutral-950 d-flex">
+                            <i class="ph-fill ph-chat-teardrop-text me-2"></i>
+                            <h2
+                                class="fs-11 fw-normal letter-1"
+                                style="line-height: 1.4"
+                            >
+                                主題話題
+                            </h2>
+                        </button>
+                        <!-- <button class="btn px-4">
+                            <i class="bi bi-pencil"></i> 文法修正
+                        </button>
+                        <button class="btn px-4">
+                            <i class="bi bi-chat-dots"></i> 主題話題
+                        </button> -->
+                    </div>
+                    <!-- 輸入訊息 -->
+                    <div class="d-flex align-items-center">
+                        <div
+                            class="input-group flex-grow-1 bg-neutral-100 px-5 py-3"
+                            style="border-radius: 20px"
+                        >
+                            <input
+                                type="text"
+                                class="form-control border-0 bg-transparent p-0 fs-10 letter-1 text-neutral-800"
+                                placeholder="輸入訊息"
+                            />
+                            <div
+                                class="input-group-text bg-transparent border-0"
+                            >
+                                <button
+                                    class="btn btn-sm text-neutral-950 p-1 me-4 border-0"
+                                >
+                                    <i class="ph-fill ph-image-square fs-7"></i>
+                                </button>
+                                <button
+                                    class="btn btn-sm text-neutral-950 p-1 border-0"
+                                >
+                                    <i class="ph-fill ph-microphone fs-7"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn border-0 p-5">
+                            <i
+                                class="ph-fill ph-paper-plane-right text-primary-600 fs-6"
+                            ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </footer>
 
         <script type="module" src="../main.js"></script>
