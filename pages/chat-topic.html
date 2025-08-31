@@ -28,10 +28,8 @@
     </head>
 
     <body class="chat-body">
-        <header>
-            <div
-                class="chat-header d-flex justify-content-between align-items-center mb-4"
-            >
+        <header class="chat-header fixed-top bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-4">
                 <!-- header-left -->
                 <div class="d-flex align-items-center">
                     <!-- 返回按鈕 -->
@@ -101,7 +99,7 @@
             </div>
         </header>
 
-        <main class="chat-topic">
+        <main class="chat-topic" style="padding-top: 56px">
             <div class="px-6">
                 <div class="py-6 border-top">
                     <!-- 對方對話 -->
@@ -173,7 +171,11 @@
                                 文法修正
                             </h2>
                         </button>
-                        <button class="btn px-5 py-4 text-neutral-950 d-flex">
+                        <button
+                            class="btn px-5 py-4 text-neutral-950 d-flex"
+                            data-bs-toggle="modal"
+                            data-bs-target="#topicModal"
+                        >
                             <i class="ph-fill ph-chat-teardrop-text me-2"></i>
                             <h2
                                 class="fs-11 fw-normal letter-1"
@@ -182,12 +184,6 @@
                                 主題話題
                             </h2>
                         </button>
-                        <!-- <button class="btn px-4">
-                            <i class="bi bi-pencil"></i> 文法修正
-                        </button>
-                        <button class="btn px-4">
-                            <i class="bi bi-chat-dots"></i> 主題話題
-                        </button> -->
                     </div>
                     <!-- 輸入訊息 -->
                     <div class="d-flex align-items-center">
@@ -225,7 +221,169 @@
             </div>
         </footer>
 
+        <div
+            class="modal fade"
+            id="topicModal"
+            tabindex="-1"
+            aria-labelledby="topicModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-bottom">
+                <div
+                    class="modal-content rounded-top-4 border-0"
+                    style="border-radius: 24px 24px 0 0"
+                >
+                    <div
+                        class="modal-header p-0 border-0 d-flex align-items-center justify-content-between"
+                    >
+                        <i class="ph ph-x fs-6 p-5"></i>
+                        <h2
+                            class="fs-8 fw-semibold lh-base letter-0 w-100 text-center m-0"
+                        >
+                            主題話題
+                        </h2>
+                        <i class="ph ph-x fs-6 p-5 invisible"></i>
+                    </div>
+
+                    <div class="modal-body pt-0">
+                        <!-- 主題選擇 -->
+                        <div
+                            class="row row-cols-3 text-neutral-950"
+                            id="topicOptions"
+                            style="margin-right: -8px; margin-left: -8px"
+                        >
+                            <div class="col px-4 text-center mb-6">
+                                <div class="topic-card topic-active-option">
+                                    <img
+                                        src="/assets/images/topic/img_topic-1.png"
+                                        alt="生活與價值icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        生活與價值
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center mb-6">
+                                <div class="topic-card">
+                                    <img
+                                        src="/assets/images/topic/img_topic-3.png"
+                                        alt="節慶與傳統icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        節慶與傳統
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center mb-6">
+                                <div class="topic-card">
+                                    <img
+                                        src="/assets/images/topic/img_topic.png"
+                                        alt="飲食與健康icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        飲食與健康
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center">
+                                <div class="topic-card">
+                                    <img
+                                        src="/assets/images/topic/img_topic-5.png"
+                                        alt="媒體與時事icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        媒體與時事
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center">
+                                <div class="topic-card">
+                                    <img
+                                        src="/assets/images/topic/img_topic-4.png"
+                                        alt="旅遊與風景icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        旅遊與風景
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center">
+                                <div class="topic-card">
+                                    <img
+                                        src="/assets/images/topic/img_topic-2.png"
+                                        alt="娛樂與流行icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        娛樂與流行
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script type="module" src="../main.js"></script>
+
+        <script>
+            const topicOptionsContainer =
+                document.getElementById("topicOptions");
+            const topicCards = document.querySelectorAll(".topic-card");
+            const defaultCard = document.querySelector(
+                ".topic-card.topic-active-option"
+            );
+
+            // 監聽滑鼠進入任何一個主題卡片
+            topicOptionsContainer.addEventListener(
+                "mouseenter",
+                function (event) {
+                    const hoveredCard = event.target.closest(".topic-card");
+
+                    if (hoveredCard) {
+                        topicCards.forEach((card) => {
+                            card.classList.remove("topic-active-option");
+                        });
+                    }
+                },
+                true
+            );
+
+            topicOptionsContainer.addEventListener("mouseleave", function () {
+                defaultCard.classList.add("topic-active-option");
+            });
+        </script>
+
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
