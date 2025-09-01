@@ -14,6 +14,8 @@
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=translate" />
 
     <title>答題中</title>
 </head>
@@ -42,8 +44,14 @@
                         </div>
                         <div class="question-body d-flex flex-column justify-content-center align-items-center px-8">
                             <div class="bedge bg-primary text-white fs-10 rounded-5 py-4 px-5 mb-5">節日</div>
-                            <div class="number mb-5">
-                                <p class="h4 fw-bold text-white">第一題</p>
+                            <div class="d-flex justify-content-center align-items-center mb-5">
+                                <p class="h4 fw-bold text-white mb-0">第 1 題</p>
+                                <!-- <button type="button" class=""> -->
+                                <span
+                                    class="material-symbols-outlined rounded-circle bg-secondary-500 border-0 fs-9 text-white align-bottom p-2 ms-5">
+                                    translate
+                                </span>
+                                <!-- </button> -->
                                 <!-- 補上 icon translate -->
                             </div>
                             <div class="text">
@@ -54,13 +62,27 @@
 
                     <!-- 答案面板 -->
                     <div class="qnswer-panel">
-
+                        <div class="d-flex align-items-end justify-content-center px-4">
+                            <div class="score-bar-container d-block flex-colcumn flex-wrap justigy-content-center">
+                                <p class="fs-8 text-center text-white mb-4">0</p>
+                                <div class="score-bar"></div>
+                            </div>
+                            <div class="px-8">
+                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅卡</button>
+                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅利</button>
+                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅票</button>
+                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅包</button>
+                            </div>
+                            <div class="score-bar-container d-block flex-colcumn flex-wrap justigy-content-center">
+                                <p class="fs-8 text-center text-white mb-4">0</p>
+                                <div class="score-bar"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
