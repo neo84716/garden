@@ -2,12 +2,52 @@
     <section class="pt-6">
         <div class="card-stack">
             <div id="card1" class="card rounded-top-5 border-0 text-white position-absolute" style="min-height: 614px;">
-                <img class="rounded-top-5 img-fluid" src="/assets/images/avatar/lg/img_avatar_lg02.png" class="card-img"
+                <img src="/assets/images/avatar/lg/img_avatar_lg02.png" class="card-img rounded-top-5 img-fluid"
                     alt="avatar_lg04" style="height: 414px; object-fit:cover;">
+                <!-- Jump Icon -->
+                <div class="position-absolute start-50 translate-middle-x">
+                    <div class="jump-icon-box d-flex align-items-center">
+                        <div class="jump-heart-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="75" height="70" viewBox="0 0 75 70" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M72.6288 13.2682C82.4159 35.2503 57.7445 67.5548 56.6837 68.9076C56.4054 69.2673 56.0424 69.5524 55.627 69.7374C55.2116 69.9223 54.7568 70.0014 54.3033 69.9675C52.5881 69.8506 12.0729 66.5691 2.28576 44.5869C-0.00667352 39.4223 -0.156895 33.5593 1.86805 28.2842C3.893 23.009 7.92775 18.7524 13.0871 16.4484C19.5719 13.5612 26.4911 13.8219 32.1289 16.9598C33.5694 10.6705 38.0055 5.35399 44.4902 2.4668C49.6548 0.174361 55.5178 0.0241404 60.793 2.04909C66.0681 4.07404 70.3247 8.10879 72.6288 13.2682Z"
+                                    fill="#01A06A" />
+                            </svg>
+                        </div>
+                        <div class="jump-star-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="78" height="75" viewBox="0 0 78 75" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M75.7225 34.5722L60.2538 47.92L64.9666 67.8816C65.2266 68.9652 65.1597 70.1016 64.7742 71.1472C64.3887 72.1927 63.702 73.1006 62.8007 73.7561C61.8995 74.4116 60.8243 74.7853 59.7108 74.83C58.5973 74.8747 57.4955 74.5884 56.5447 74.0072L39.1853 63.3235L21.8156 74.0072C20.8649 74.585 19.7645 74.8686 18.6529 74.8223C17.5414 74.7759 16.4684 74.4017 15.569 73.7468C14.6697 73.0919 13.9843 72.1855 13.599 71.1418C13.2138 70.0981 13.1459 68.9638 13.4041 67.8816L18.1341 47.92L2.66533 34.5722C1.82417 33.8452 1.21582 32.8865 0.916272 31.8158C0.61672 30.7452 0.639237 29.61 0.981009 28.552C1.32278 27.4941 1.96866 26.5602 2.83799 25.8672C3.70732 25.1741 4.76157 24.7525 5.86908 24.655L26.1503 23.0188L33.9741 4.08502C34.3976 3.05314 35.1183 2.1705 36.0447 1.54931C36.9711 0.928116 38.0613 0.596436 39.1767 0.596436C40.2921 0.596436 41.3823 0.928116 42.3087 1.54931C43.2351 2.1705 43.9559 3.05314 44.3794 4.08502L52.1997 23.0188L72.481 24.655C73.5907 24.7489 74.648 25.1681 75.5205 25.8602C76.393 26.5523 77.0418 27.4865 77.3857 28.5458C77.7296 29.605 77.7533 30.7422 77.4538 31.8148C77.1542 32.8874 76.5448 33.8478 75.7019 34.5756L75.7225 34.5722Z"
+                                    fill="url(#paint0_linear_4844_16205)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4844_16205" x1="39.1846" y1="0.596436"
+                                        x2="39.1846" y2="74.8345" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#97C2F9" />
+                                        <stop offset="1" stop-color="#3164E4" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="jump-dislike-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="75" height="74" viewBox="0 0 75 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.19506 43.5046C3.47549 43.7808 2.81738 44.196 2.25829 44.7266C1.69919 45.2571 1.25007 45.8926 0.93657 46.5968C0.623072 47.3009 0.451339 48.0599 0.431164 48.8304C0.410989 49.6009 0.542763 50.3678 0.818981 51.0874C1.0952 51.8069 1.51045 52.4651 2.041 53.0241C2.57156 53.5832 3.20705 54.0324 3.91117 54.3459C4.6153 54.6594 5.37429 54.8311 6.14479 54.8513C6.91529 54.8714 7.68222 54.7397 8.40179 54.4635L33.9045 44.6683L43.6899 70.1747C43.9662 70.8943 44.3814 71.5524 44.912 72.1115C45.4425 72.6706 46.078 73.1197 46.7821 73.4332C47.4863 73.7467 48.2452 73.9185 49.0157 73.9386C49.7862 73.9588 50.5532 73.827 51.2727 73.5508C51.9923 73.2746 52.6504 72.8594 53.2095 72.3288C53.7686 71.7983 54.2177 71.1628 54.5312 70.4586C54.8447 69.7545 55.0165 68.9955 55.0366 68.225C55.0568 67.4545 54.925 66.6876 54.6488 65.968L44.8537 40.4653L70.3601 30.6799C71.8134 30.122 72.9855 29.0097 73.6186 27.5877C74.2517 26.1656 74.294 24.5503 73.7362 23.0971C73.1784 21.6438 72.0661 20.4717 70.644 19.8386C69.222 19.2054 67.6066 19.1631 66.1534 19.721L40.6507 29.5161L30.8653 4.00969C30.589 3.29012 30.1738 2.632 29.6432 2.0729C29.1127 1.51381 28.4772 1.0647 27.7731 0.751202C27.0689 0.437704 26.3099 0.265958 25.5394 0.245781C24.7689 0.225605 24.002 0.357388 23.2824 0.633605C22.5629 0.909822 21.9048 1.32507 21.3457 1.85563C20.7866 2.38619 20.3374 3.02167 20.024 3.7258C19.7105 4.42993 19.5387 5.18891 19.5185 5.95941C19.4984 6.72991 19.6301 7.49684 19.9064 8.21641L29.7015 33.7191L4.19506 43.5046Z"
+                                    fill="#F52761" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="card-img-overlay p-0 d-flex flex-column justify-content-end">
                     <div class="bg-white rounded-top-5 pt-9 p-8 pb-0 position-relative">
                         <!-- Icon -->
-                        <button id="dislike-icon"
+                        <button id="dislike-icon1"
                             class="bg-white border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute dislike-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -25,7 +65,7 @@
                             </svg>
 
                         </button>
-                        <button id="star-icon"
+                        <button id="star-icon1"
                             class="bg-accent-600 border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute star-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 29 28" fill="none"
@@ -36,7 +76,7 @@
                             </svg>
 
                         </button>
-                        <button id="heart-icon"
+                        <button id="heart-icon1"
                             class="bg-primary-600 border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute heart-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -46,8 +86,8 @@
                                     fill="white" />
                             </svg>
                         </button>
-                        <div class="d-flex align-items-center mb-6" data-bs-toggle="collapse" href="#collapseContent"
-                            role="button" aria-expanded="false" aria-controls="collapseContent">
+                        <div class="d-flex align-items-center mb-6" data-bs-toggle="collapse" href="#collapseContent1"
+                            role="button" aria-expanded="false" aria-controls="collapseContent1">
                             <img class="me-4" src="/assets/images/flag/png/img_flag_us.png" alt="flag_us">
                             <h3 class="text-neutral-950 fw-bold fs-5 lh-sm">Sora<span class="ms-4 me-3">24</span></h3>
                             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="collapse" id="collapseContent">
+                    <div class="collapse" id="collapseContent1">
                         <div class="p-8 pb-0">
                             <div class="border-top border-bottom border-neutral-200">
                                 <p class="text-neutral-800 fs-10 mb-3 mt-8">自我介紹</p>
@@ -128,12 +168,52 @@
                 </div>
             </div>
             <div id="card2" class="card rounded-top-5 border-0 text-white position-absolute" style="min-height: 614px;">
-                <img class="rounded-top-5 img-fluid" src="/assets/images/avatar/lg/img_avatar_lg03.png" class="card-img"
+                <img src="/assets/images/avatar/lg/img_avatar_lg03.png" class="card-img rounded-top-5 img-fluid"
                     alt="avatar_lg04" style="height: 414px; object-fit:cover;">
+                <!-- Jump Icon -->
+                <div class="position-absolute start-50 translate-middle-x">
+                    <div class="jump-icon-box d-flex align-items-center">
+                        <div class="jump-heart-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="75" height="70" viewBox="0 0 75 70" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M72.6288 13.2682C82.4159 35.2503 57.7445 67.5548 56.6837 68.9076C56.4054 69.2673 56.0424 69.5524 55.627 69.7374C55.2116 69.9223 54.7568 70.0014 54.3033 69.9675C52.5881 69.8506 12.0729 66.5691 2.28576 44.5869C-0.00667352 39.4223 -0.156895 33.5593 1.86805 28.2842C3.893 23.009 7.92775 18.7524 13.0871 16.4484C19.5719 13.5612 26.4911 13.8219 32.1289 16.9598C33.5694 10.6705 38.0055 5.35399 44.4902 2.4668C49.6548 0.174361 55.5178 0.0241404 60.793 2.04909C66.0681 4.07404 70.3247 8.10879 72.6288 13.2682Z"
+                                    fill="#01A06A" />
+                            </svg>
+                        </div>
+                        <div class="jump-star-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="78" height="75" viewBox="0 0 78 75" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M75.7225 34.5722L60.2538 47.92L64.9666 67.8816C65.2266 68.9652 65.1597 70.1016 64.7742 71.1472C64.3887 72.1927 63.702 73.1006 62.8007 73.7561C61.8995 74.4116 60.8243 74.7853 59.7108 74.83C58.5973 74.8747 57.4955 74.5884 56.5447 74.0072L39.1853 63.3235L21.8156 74.0072C20.8649 74.585 19.7645 74.8686 18.6529 74.8223C17.5414 74.7759 16.4684 74.4017 15.569 73.7468C14.6697 73.0919 13.9843 72.1855 13.599 71.1418C13.2138 70.0981 13.1459 68.9638 13.4041 67.8816L18.1341 47.92L2.66533 34.5722C1.82417 33.8452 1.21582 32.8865 0.916272 31.8158C0.61672 30.7452 0.639237 29.61 0.981009 28.552C1.32278 27.4941 1.96866 26.5602 2.83799 25.8672C3.70732 25.1741 4.76157 24.7525 5.86908 24.655L26.1503 23.0188L33.9741 4.08502C34.3976 3.05314 35.1183 2.1705 36.0447 1.54931C36.9711 0.928116 38.0613 0.596436 39.1767 0.596436C40.2921 0.596436 41.3823 0.928116 42.3087 1.54931C43.2351 2.1705 43.9559 3.05314 44.3794 4.08502L52.1997 23.0188L72.481 24.655C73.5907 24.7489 74.648 25.1681 75.5205 25.8602C76.393 26.5523 77.0418 27.4865 77.3857 28.5458C77.7296 29.605 77.7533 30.7422 77.4538 31.8148C77.1542 32.8874 76.5448 33.8478 75.7019 34.5756L75.7225 34.5722Z"
+                                    fill="url(#paint0_linear_4844_16205)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4844_16205" x1="39.1846" y1="0.596436"
+                                        x2="39.1846" y2="74.8345" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#97C2F9" />
+                                        <stop offset="1" stop-color="#3164E4" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="jump-dislike-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="75" height="74" viewBox="0 0 75 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.19506 43.5046C3.47549 43.7808 2.81738 44.196 2.25829 44.7266C1.69919 45.2571 1.25007 45.8926 0.93657 46.5968C0.623072 47.3009 0.451339 48.0599 0.431164 48.8304C0.410989 49.6009 0.542763 50.3678 0.818981 51.0874C1.0952 51.8069 1.51045 52.4651 2.041 53.0241C2.57156 53.5832 3.20705 54.0324 3.91117 54.3459C4.6153 54.6594 5.37429 54.8311 6.14479 54.8513C6.91529 54.8714 7.68222 54.7397 8.40179 54.4635L33.9045 44.6683L43.6899 70.1747C43.9662 70.8943 44.3814 71.5524 44.912 72.1115C45.4425 72.6706 46.078 73.1197 46.7821 73.4332C47.4863 73.7467 48.2452 73.9185 49.0157 73.9386C49.7862 73.9588 50.5532 73.827 51.2727 73.5508C51.9923 73.2746 52.6504 72.8594 53.2095 72.3288C53.7686 71.7983 54.2177 71.1628 54.5312 70.4586C54.8447 69.7545 55.0165 68.9955 55.0366 68.225C55.0568 67.4545 54.925 66.6876 54.6488 65.968L44.8537 40.4653L70.3601 30.6799C71.8134 30.122 72.9855 29.0097 73.6186 27.5877C74.2517 26.1656 74.294 24.5503 73.7362 23.0971C73.1784 21.6438 72.0661 20.4717 70.644 19.8386C69.222 19.2054 67.6066 19.1631 66.1534 19.721L40.6507 29.5161L30.8653 4.00969C30.589 3.29012 30.1738 2.632 29.6432 2.0729C29.1127 1.51381 28.4772 1.0647 27.7731 0.751202C27.0689 0.437704 26.3099 0.265958 25.5394 0.245781C24.7689 0.225605 24.002 0.357388 23.2824 0.633605C22.5629 0.909822 21.9048 1.32507 21.3457 1.85563C20.7866 2.38619 20.3374 3.02167 20.024 3.7258C19.7105 4.42993 19.5387 5.18891 19.5185 5.95941C19.4984 6.72991 19.6301 7.49684 19.9064 8.21641L29.7015 33.7191L4.19506 43.5046Z"
+                                    fill="#F52761" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="card-img-overlay p-0 d-flex flex-column justify-content-end">
                     <div class="bg-white rounded-top-5 pt-9 p-8 pb-0 position-relative">
                         <!-- Icon -->
-                        <button id="dislike-icon" type="button"
+                        <button id="dislike-icon2" type="button"
                             class="bg-white border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute dislike-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -150,7 +230,7 @@
                                 </defs>
                             </svg>
                         </button>
-                        <button id="star-icon" type="button"
+                        <button id="star-icon2" type="button"
                             class="bg-accent-600 border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute star-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 29 28" fill="none"
@@ -161,7 +241,7 @@
                             </svg>
 
                         </button>
-                        <button id="heart-icon" type="button"
+                        <button id="heart-icon2" type="button"
                             class="bg-primary-600 border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute heart-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -171,8 +251,8 @@
                                     fill="white" />
                             </svg>
                         </button>
-                        <div class="d-flex align-items-center mb-6" data-bs-toggle="collapse" href="#collapseContent"
-                            role="button" aria-expanded="false" aria-controls="collapseContent">
+                        <div class="d-flex align-items-center mb-6" data-bs-toggle="collapse" href="#collapseContent2"
+                            role="button" aria-expanded="false" aria-controls="collapseContent2">
                             <img class="me-4" src="/assets/images/flag/png/img_flag_fr.png" alt="flag_us">
                             <h3 class="text-neutral-950 fw-bold fs-5 lh-sm">Celine<span class="ms-4 me-3">23</span></h3>
                             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -239,7 +319,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="collapse" id="collapseContent">
+                    <div class="collapse" id="collapseContent2">
                         <div class="p-8 pb-0">
                             <div class="border-top border-bottom border-neutral-200">
                                 <p class="text-neutral-800 fs-10 mb-3 mt-8">自我介紹</p>
@@ -253,12 +333,52 @@
                 </div>
             </div>
             <div id="card3" class="card rounded-top-5 border-0 text-white position-absolute" style="min-height: 614px;">
-                <img class="rounded-top-5 img-fluid" src="/assets/images/avatar/lg/img_avatar_lg04.png" class="card-img"
+                <img src="/assets/images/avatar/lg/img_avatar_lg04.png" class="card-img rounded-top-5 img-fluid"
                     alt="avatar_lg04" style="height: 414px; object-fit:cover;">
+                <!-- Jump Icon -->
+                <div class="position-absolute start-50 translate-middle-x">
+                    <div class="jump-icon-box d-flex align-items-center">
+                        <div class="jump-heart-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="75" height="70" viewBox="0 0 75 70" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M72.6288 13.2682C82.4159 35.2503 57.7445 67.5548 56.6837 68.9076C56.4054 69.2673 56.0424 69.5524 55.627 69.7374C55.2116 69.9223 54.7568 70.0014 54.3033 69.9675C52.5881 69.8506 12.0729 66.5691 2.28576 44.5869C-0.00667352 39.4223 -0.156895 33.5593 1.86805 28.2842C3.893 23.009 7.92775 18.7524 13.0871 16.4484C19.5719 13.5612 26.4911 13.8219 32.1289 16.9598C33.5694 10.6705 38.0055 5.35399 44.4902 2.4668C49.6548 0.174361 55.5178 0.0241404 60.793 2.04909C66.0681 4.07404 70.3247 8.10879 72.6288 13.2682Z"
+                                    fill="#01A06A" />
+                            </svg>
+                        </div>
+                        <div class="jump-star-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="78" height="75" viewBox="0 0 78 75" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M75.7225 34.5722L60.2538 47.92L64.9666 67.8816C65.2266 68.9652 65.1597 70.1016 64.7742 71.1472C64.3887 72.1927 63.702 73.1006 62.8007 73.7561C61.8995 74.4116 60.8243 74.7853 59.7108 74.83C58.5973 74.8747 57.4955 74.5884 56.5447 74.0072L39.1853 63.3235L21.8156 74.0072C20.8649 74.585 19.7645 74.8686 18.6529 74.8223C17.5414 74.7759 16.4684 74.4017 15.569 73.7468C14.6697 73.0919 13.9843 72.1855 13.599 71.1418C13.2138 70.0981 13.1459 68.9638 13.4041 67.8816L18.1341 47.92L2.66533 34.5722C1.82417 33.8452 1.21582 32.8865 0.916272 31.8158C0.61672 30.7452 0.639237 29.61 0.981009 28.552C1.32278 27.4941 1.96866 26.5602 2.83799 25.8672C3.70732 25.1741 4.76157 24.7525 5.86908 24.655L26.1503 23.0188L33.9741 4.08502C34.3976 3.05314 35.1183 2.1705 36.0447 1.54931C36.9711 0.928116 38.0613 0.596436 39.1767 0.596436C40.2921 0.596436 41.3823 0.928116 42.3087 1.54931C43.2351 2.1705 43.9559 3.05314 44.3794 4.08502L52.1997 23.0188L72.481 24.655C73.5907 24.7489 74.648 25.1681 75.5205 25.8602C76.393 26.5523 77.0418 27.4865 77.3857 28.5458C77.7296 29.605 77.7533 30.7422 77.4538 31.8148C77.1542 32.8874 76.5448 33.8478 75.7019 34.5756L75.7225 34.5722Z"
+                                    fill="url(#paint0_linear_4844_16205)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_4844_16205" x1="39.1846" y1="0.596436"
+                                        x2="39.1846" y2="74.8345" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#97C2F9" />
+                                        <stop offset="1" stop-color="#3164E4" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="jump-dislike-icon d-flex justify-content-center align-items-center"
+                            style="height: 88px;width: 88px;">
+                            <svg width="75" height="74" viewBox="0 0 75 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.19506 43.5046C3.47549 43.7808 2.81738 44.196 2.25829 44.7266C1.69919 45.2571 1.25007 45.8926 0.93657 46.5968C0.623072 47.3009 0.451339 48.0599 0.431164 48.8304C0.410989 49.6009 0.542763 50.3678 0.818981 51.0874C1.0952 51.8069 1.51045 52.4651 2.041 53.0241C2.57156 53.5832 3.20705 54.0324 3.91117 54.3459C4.6153 54.6594 5.37429 54.8311 6.14479 54.8513C6.91529 54.8714 7.68222 54.7397 8.40179 54.4635L33.9045 44.6683L43.6899 70.1747C43.9662 70.8943 44.3814 71.5524 44.912 72.1115C45.4425 72.6706 46.078 73.1197 46.7821 73.4332C47.4863 73.7467 48.2452 73.9185 49.0157 73.9386C49.7862 73.9588 50.5532 73.827 51.2727 73.5508C51.9923 73.2746 52.6504 72.8594 53.2095 72.3288C53.7686 71.7983 54.2177 71.1628 54.5312 70.4586C54.8447 69.7545 55.0165 68.9955 55.0366 68.225C55.0568 67.4545 54.925 66.6876 54.6488 65.968L44.8537 40.4653L70.3601 30.6799C71.8134 30.122 72.9855 29.0097 73.6186 27.5877C74.2517 26.1656 74.294 24.5503 73.7362 23.0971C73.1784 21.6438 72.0661 20.4717 70.644 19.8386C69.222 19.2054 67.6066 19.1631 66.1534 19.721L40.6507 29.5161L30.8653 4.00969C30.589 3.29012 30.1738 2.632 29.6432 2.0729C29.1127 1.51381 28.4772 1.0647 27.7731 0.751202C27.0689 0.437704 26.3099 0.265958 25.5394 0.245781C24.7689 0.225605 24.002 0.357388 23.2824 0.633605C22.5629 0.909822 21.9048 1.32507 21.3457 1.85563C20.7866 2.38619 20.3374 3.02167 20.024 3.7258C19.7105 4.42993 19.5387 5.18891 19.5185 5.95941C19.4984 6.72991 19.6301 7.49684 19.9064 8.21641L29.7015 33.7191L4.19506 43.5046Z"
+                                    fill="#F52761" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="card-img-overlay p-0 d-flex flex-column justify-content-end">
                     <div class="bg-white rounded-top-5 pt-9 p-8 pb-0 position-relative">
                         <!-- Icon -->
-                        <button id="dislike-icon" type="button"
+                        <button id="dislike-icon3" type="button"
                             class="bg-white border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute dislike-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -275,7 +395,7 @@
                                 </defs>
                             </svg>
                         </button>
-                        <button id="star-icon" type="button"
+                        <button id="star-icon3" type="button"
                             class="bg-accent-600 border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute star-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 29 28" fill="none"
@@ -286,7 +406,7 @@
                             </svg>
 
                         </button>
-                        <button id="heart-icon" type="button"
+                        <button id="heart-icon3" type="button"
                             class="bg-primary-600 border-0 shadow-sm rounded-pill d-flex justify-content-center align-items-center position-absolute heart-icon"
                             style="height: 64px;width: 64px;">
                             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
@@ -296,8 +416,8 @@
                                     fill="white" />
                             </svg>
                         </button>
-                        <div class="d-flex align-items-center mb-6" data-bs-toggle="collapse" href="#collapseContent"
-                            role="button" aria-expanded="false" aria-controls="collapseContent">
+                        <div class="d-flex align-items-center mb-6" data-bs-toggle="collapse" href="#collapseContent3"
+                            role="button" aria-expanded="false" aria-controls="collapseContent3">
                             <img class="me-4" src="/assets/images/flag/png/img_flag_us.png" alt="flag_us">
                             <h3 class="text-neutral-950 fw-bold fs-5 lh-sm">Elena<span class="ms-4 me-3">25</span></h3>
                             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +484,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="collapse" id="collapseContent">
+                    <div class="collapse" id="collapseContent3">
                         <div class="p-8 pb-0">
                             <div class="border-top border-bottom border-neutral-200">
                                 <p class="text-neutral-800 fs-10 mb-3 mt-8">自我介紹</p>
@@ -386,23 +506,39 @@
         AOS.init();
 
         document.addEventListener("click", (e) => {
-            if (
-                e.target.closest("#dislike-icon") ||
-                e.target.closest("#star-icon") ||
-                e.target.closest("#heart-icon")
-            ) {
-                // 只選可見的卡片
+            const iconMap = {
+                "heart-icon": "jump-heart-icon",
+                "star-icon": "jump-star-icon",
+                "dislike-icon": "jump-dislike-icon"
+            };
+
+            const clickedIconClass = Object.keys(iconMap).find(cls => e.target.closest(`.${cls}`));
+            if (!clickedIconClass) return;
+
+            // 找到點擊圖示的父卡片
+            const parentCard = e.target.closest(".card");
+            if (!parentCard) return;
+
+            // 只取這張卡片內對應的 jump icon 並且可見
+            const jumpIcons = Array.from(parentCard.querySelectorAll(`.${iconMap[clickedIconClass]}`))
+                .filter(icon => icon.offsetParent !== null);
+            if (!jumpIcons.length) return;
+            const jumpIcon = jumpIcons[0];
+
+            jumpIcon.classList.remove("active");
+            void jumpIcon.offsetWidth;
+            jumpIcon.classList.add("active");
+
+            setTimeout(() => {
+                jumpIcon.classList.remove("active");
+
                 const cards = Array.from(document.querySelectorAll(".card"))
-                    .filter(card => card.offsetParent !== null); // offsetParent 為 null 表示 display:none
+                    .filter(card => card.offsetParent !== null);
 
-                if (!cards.length) return;
-
-                // 如果只剩最後一張卡片，不做任何動畫
-                if (cards.length === 1) return;
+                if (!cards.length || cards.length === 1) return;
 
                 const topCard = cards[cards.length - 1];
 
-                // 觸發動畫
                 topCard.classList.remove("animate-dislike");
                 void topCard.offsetWidth;
                 topCard.classList.add("animate-dislike");
@@ -414,25 +550,31 @@
                     },
                     { once: true }
                 );
-            }
+
+            }, 800);
         });
+
+
 
         // Bootstrap Collapse
-        const collapseEl = document.getElementById('collapseContent');
-        const icons = document.querySelectorAll('.dislike-icon, .star-icon, .heart-icon');
-        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
+        document.querySelectorAll('.collapse').forEach(collapseEl => {
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl, { toggle: false });
 
-        collapseEl.addEventListener('show.bs.collapse', function () {
-            icons.forEach(icon => {
-                icon.classList.remove('icon-visible');
-                icon.classList.add('icon-hidden');
+            const card = collapseEl.closest('.card');
+            const icons = card.querySelectorAll('.dislike-icon, .star-icon, .heart-icon');
+
+            collapseEl.addEventListener('show.bs.collapse', function () {
+                icons.forEach(icon => {
+                    icon.classList.remove('icon-visible');
+                    icon.classList.add('icon-hidden');
+                });
             });
-        });
 
-        collapseEl.addEventListener('hide.bs.collapse', function () {
-            icons.forEach(icon => {
-                icon.classList.remove('icon-hidden');
-                icon.classList.add('icon-visible');
+            collapseEl.addEventListener('hide.bs.collapse', function () {
+                icons.forEach(icon => {
+                    icon.classList.remove('icon-hidden');
+                    icon.classList.add('icon-visible');
+                });
             });
         });
     });
