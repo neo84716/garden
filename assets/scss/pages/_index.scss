@@ -52,12 +52,12 @@
 .jump-dislike-icon {
     opacity: 0;
     transform: translateY(200px);
-    transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.25, 1.5, 0.5, 1);
 }
 
 .jump-heart-icon.active,
 .jump-star-icon.active,
 .jump-dislike-icon.active {
     opacity: 1;
-    transform: translateY(-20px); /* 目標位置 */
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.25, 1.5, 0.5, 1);
 }
