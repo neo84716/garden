@@ -1,0 +1,567 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+        />
+        <title>話題聊天</title>
+    </head>
+
+    <body class="chat-body">
+        <header class="chat-header fixed-top bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="d-flex align-items-center">
+                    <a class="btn text-neutral-950 border-0 lh-1 p-5">
+                        <i class="ph ph-caret-left fs-6"></i>
+                    </a>
+                    <div class="d-flex">
+                        <div>
+                            <div class="position-relative me-6">
+                                <img
+                                    src="/assets/images/avatar/md/img_avatar_md08.png"
+                                    class="rounded-circle"
+                                    style="width: 36px"
+                                    alt="Elena 頭貼照"
+                                />
+                                <i
+                                    class="ph-fill ph-seal-check fs-9 text-accent-600 position-absolute"
+                                    style="
+                                        bottom: -3px;
+                                        right: -3px;
+                                        z-index: 2;
+                                    "
+                                ></i>
+                                <i
+                                    class="ph-fill ph-seal fs-9 text-white position-absolute"
+                                    style="
+                                        bottom: -3px;
+                                        right: -3px;
+                                        z-index: 1;
+                                    "
+                                ></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="fs-9 letter-0 lh-base fw-semibold">
+                                Elena
+                            </h1>
+                            <div class="d-flex align-items-center">
+                                <span
+                                    class="d-inline-block bg-success-500 rounded-pill p-2 me-2"
+                                    style="margin-right: 4.5px"
+                                ></span>
+                                <span
+                                    class="fs-11 letter-2"
+                                    style="line-height: 1.4"
+                                    >線上</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn border-0 lh-1 p-5">
+                        <i class="ph-fill ph-phone text-primary-600 fs-6"></i>
+                    </a>
+                    <a class="btn border-0 lh-1 p-5">
+                        <i
+                            class="ph-fill ph-video-camera text-primary-600 fs-6"
+                        ></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="chat-topic" style="padding-top: 56px">
+            <div class="px-6">
+                <div class="pt-6 border-top">
+                    <div class="d-flex align-items-end gap-4 mb-9">
+                        <img
+                            src="/assets/images/avatar/md/img_avatar_md08.png"
+                            class="rounded-pill flex-shrink-0"
+                            style="
+                                width: 28px;
+                                height: 28px;
+                                margin-bottom: 22px;
+                            "
+                            alt="Elena 頭貼照"
+                        />
+                        <div class="pe-13 dialog-box">
+                            <div class="mb-4">
+                                <p class="message-box fs-10 letter-1">Hello!</p>
+                            </div>
+                            <div class="mb-4">
+                                <p class="message-box fs-10 letter-1">
+                                    I'm excited to practice languages with you!
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <p
+                                    class="message-box fs-10 letter-1 mb-4"
+                                    style="border-bottom-left-radius: 4px"
+                                >
+                                    Hello! I'm excited to practice languages
+                                    with you!
+                                </p>
+                                <time
+                                    class="text-neutral-600 text-neutral-600 fs-11 letter-1"
+                                    datetime="16:02"
+                                    style="line-height: 1.4"
+                                    >下午4:02</time
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="chat-footer fixed-bottom bg-white">
+            <div class="px-6">
+                <div class="py-5 border-top">
+                    <div class="d-flex gap-4 mb-5">
+                        <button
+                            class="btn px-5 py-4 text-neutral-950 d-flex me-2"
+                        >
+                            <i class="ph ph-globe-simple me-2"></i>
+                            <h2
+                                class="fs-11 fw-normal letter-1"
+                                style="line-height: 1.4"
+                            >
+                                即時翻譯
+                            </h2>
+                        </button>
+                        <button
+                            class="btn px-5 py-4 text-neutral-950 d-flex me-auto"
+                        >
+                            <i class="ph-fill ph-pencil-simple me-2"></i>
+                            <h2
+                                class="fs-11 fw-normal letter-1"
+                                style="line-height: 1.4"
+                            >
+                                文法修正
+                            </h2>
+                        </button>
+                        <button
+                            class="btn px-5 py-4 text-neutral-950 d-flex"
+                            data-bs-toggle="modal"
+                            data-bs-target="#topicModal"
+                        >
+                            <i class="ph-fill ph-chat-teardrop-text me-2"></i>
+                            <h2
+                                class="fs-11 fw-normal letter-1"
+                                style="line-height: 1.4"
+                            >
+                                主題話題
+                            </h2>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div
+                            class="input-group flex-grow-1 bg-neutral-100 px-5 py-3"
+                            style="border-radius: 12px"
+                        >
+                            <textarea
+                                id="mainInput"
+                                class="form-control border-0 bg-transparent fs-10 letter-1 text-neutral-800 chat-input"
+                                placeholder="輸入訊息"
+                                rows="1"
+                                style="resize: none; overflow-y: hidden"
+                            ></textarea>
+                            <div
+                                class="input-group-text bg-transparent border-0"
+                            >
+                                <button
+                                    class="btn btn-sm text-neutral-950 p-1 me-4 border-0"
+                                >
+                                    <i class="ph-fill ph-image-square fs-7"></i>
+                                </button>
+                                <button
+                                    class="btn btn-sm text-neutral-950 p-1 border-0"
+                                >
+                                    <i class="ph-fill ph-microphone fs-7"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button
+                            class="btn border-0 p-5"
+                            id="sendButton"
+                            type="submit"
+                        >
+                            <i
+                                class="ph-fill ph-paper-plane-right text-primary-600 fs-6"
+                            ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div
+            class="modal fade"
+            id="topicModal"
+            tabindex="-1"
+            aria-labelledby="topicModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-bottom">
+                <div
+                    class="modal-content rounded-top-4 border-0"
+                    style="border-radius: 24px 24px 0 0"
+                >
+                    <div
+                        class="modal-header p-0 border-0 d-flex align-items-center justify-content-between mb-6"
+                    >
+                        <button
+                            type="button"
+                            class="btn p-0"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <i class="ph ph-x fs-6 p-5"></i>
+                        </button>
+                        <h2
+                            class="fs-8 fw-semibold lh-base letter-0 w-100 text-center m-0"
+                        >
+                            主題話題
+                        </h2>
+                        <i class="ph ph-x fs-6 p-5 invisible"></i>
+                    </div>
+
+                    <div class="modal-body pt-0 px-4">
+                        <div
+                            class="row row-cols-3 text-neutral-950 mb-6"
+                            id="topicOptions"
+                            style="margin-right: -8px; margin-left: -8px"
+                        >
+                            <div class="col px-4 text-center mb-6">
+                                <div
+                                    class="topic-card topic-active-option"
+                                    data-text="How do you define a meaningful life?"
+                                >
+                                    <img
+                                        src="/assets/images/topic/img_topic-1.png"
+                                        alt="生活與價值icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        生活與價值
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center mb-6">
+                                <div
+                                    class="topic-card"
+                                    data-text="What is your favorite festival?"
+                                >
+                                    <img
+                                        src="/assets/images/topic/img_topic-3.png"
+                                        alt="節慶與傳統icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        節慶與傳統
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center mb-6">
+                                <div
+                                    class="topic-card"
+                                    data-text="What's a dish you would recommend?"
+                                >
+                                    <img
+                                        src="/assets/images/topic/img_topic.png"
+                                        alt="飲食與健康icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        飲食與健康
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center">
+                                <div
+                                    class="topic-card"
+                                    data-text="What's a recent news story?"
+                                >
+                                    <img
+                                        src="/assets/images/topic/img_topic-5.png"
+                                        alt="媒體與時事icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        媒體與時事
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center">
+                                <div
+                                    class="topic-card"
+                                    data-text="Where is your favorite place in the world?"
+                                >
+                                    <img
+                                        src="/assets/images/topic/img_topic-4.png"
+                                        alt="旅遊與風景icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        旅遊與風景
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col px-4 text-center">
+                                <div
+                                    class="topic-card"
+                                    data-text="What kind of music do you like?"
+                                >
+                                    <img
+                                        src="/assets/images/topic/img_topic-2.png"
+                                        alt="娛樂與流行icon"
+                                        style="width: 24px"
+                                        class="mb-3"
+                                    />
+                                    <h3
+                                        class="fs-11 letter-1 fw-normal"
+                                        style="line-height: 1.4"
+                                    >
+                                        娛樂與流行
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="input-group flex-grow-1 bg-neutral-100 p-5 mb-6"
+                            style="border-radius: 12px"
+                        >
+                            <input
+                                type="text"
+                                id="questionInput"
+                                class="form-control border-0 bg-transparent p-0 fs-10 letter-1 text-neutral-800"
+                                placeholder="How do you define a meaningful life?"
+                            />
+                            <div
+                                class="input-group-text p-0 m-0 bg-transparent border-0"
+                            >
+                                <button
+                                    class="btn btn-sm text-neutral-950 p-1 border-0"
+                                >
+                                    <i class="ph ph-shuffle fs-7"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div>
+                            <button
+                                id="confirmButton"
+                                class="btn text-white btn-primary-600 w-100 rounded-pill fw-semibold py-5 px-10 letter-0 border-0"
+                                style="max-width: 400px;"
+                            >
+                                確認
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="../main.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script>
+            // 選擇所有需要的 DOM 元素
+            const topicCards = document.querySelectorAll(".topic-card");
+            const questionInput = document.getElementById("questionInput");
+            const mainInput = document.getElementById("mainInput");
+            const confirmButton = document.getElementById("confirmButton");
+            const sendButton = document.getElementById("sendButton");
+            const chatTopic = document.querySelector(".chat-topic");
+
+            // 實例化 Bootstrap Modal
+            const topicModal = new bootstrap.Modal(
+                document.getElementById("topicModal")
+            );
+
+            // 網頁載入時的預設值設定
+            const defaultTopic = document.querySelector(
+                ".topic-card.topic-active-option"
+            );
+            if (defaultTopic) {
+                questionInput.value = defaultTopic.getAttribute("data-text");
+            }
+
+            // 主題卡片點擊事件
+            topicCards.forEach((card) => {
+                card.addEventListener("click", function () {
+                    // 移除所有主題卡片的「被選中」樣式
+                    topicCards.forEach((item) => {
+                        item.classList.remove("topic-active-option");
+                    });
+
+                    // 為被點擊的卡片添加「被選中」樣式
+                    this.classList.add("topic-active-option");
+
+                    // 將卡片上的預設文字賦予給彈出視窗的輸入框
+                    const selectedText = this.getAttribute("data-text");
+                    questionInput.value = selectedText;
+                });
+            });
+
+            // 確認按鈕點擊事件 (將文字從彈出視窗轉移到主輸入框)
+            confirmButton.addEventListener("click", function () {
+                // 將彈出視窗輸入框的值賦予給主畫面的輸入框
+                mainInput.value = questionInput.value;
+
+                // 創建並觸發 'input' 事件，以確保 textarea 自動擴展
+                const event = new Event("input", {
+                    bubbles: true,
+                });
+                mainInput.dispatchEvent(event);
+
+                // 隱藏彈出視窗
+                topicModal.hide();
+            });
+
+            /**
+             * 創建一個訊息氣泡的 DOM 元素。
+             * @param {string} text - 訊息的文本內容。
+             * @param {string} sender - 訊息發送者 ("user" 或其他)。
+             * @param {boolean} showTime - 是否顯示時間戳記。
+             * @returns {HTMLElement} - 創建好的訊息氣泡 DOM 元素。
+             */
+            function createMessage(text, sender, showTime) {
+                // 創建最外層的容器 <div class="dialog-box mb-3">
+                const dialogBox = document.createElement("div");
+                dialogBox.classList.add("dialog-box", "mb-3", "ms-13");
+
+                // 創建訊息內容的 <p> 標籤
+                const messageParagraph = document.createElement("p");
+                messageParagraph.classList.add(
+                    "message-box",
+                    "fs-10",
+                    "letter-1",
+                    "mb-4"
+                );
+                messageParagraph.textContent = text;
+
+                // 獲取當前時間並格式化
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const formattedTime = `下午${hours}:${
+                    minutes < 10 ? "0" : ""
+                }${minutes}`;
+
+                // 創建時間的 <time> 標籤
+                const timeElement = document.createElement("time");
+                timeElement.classList.add(
+                    "text-neutral-600",
+                    "fs-11",
+                    "letter-1",
+                    "message-time" // 新增 class 以便後續選取
+                );
+                timeElement.style.lineHeight = "1.4";
+                timeElement.textContent = formattedTime;
+
+                // 根據發送者決定樣式和結構
+                // 使用者訊息：靠右對齊，淺綠色氣泡
+                dialogBox.classList.add("d-flex", "justify-content-end");
+                messageParagraph.style.backgroundColor = "#6ee7b7"; // 自定義顏色
+                messageParagraph.style.borderBottomRightRadius = "4px";
+
+                // 創建第二層的容器 <div class="d-flex flex-column">
+                const contentContainer = document.createElement("div");
+                contentContainer.classList.add(
+                    "d-flex",
+                    "flex-column",
+                    "me-6",
+                    "align-items-end"
+                );
+
+                // 將 p 標籤添加到第二層容器中
+                contentContainer.appendChild(messageParagraph);
+
+                // 根據 showTime 參數決定是否添加時間標籤
+                if (showTime) {
+                    contentContainer.appendChild(timeElement);
+                }
+
+                dialogBox.appendChild(contentContainer);
+
+                return dialogBox;
+            }
+
+            // 發送按鈕點擊事件 (將文字顯示在對話視窗)
+            sendButton.addEventListener("click", function () {
+                const messageText = mainInput.value.trim();
+                if (messageText === "") {
+                    return;
+                }
+
+                // 步驟 1: 找到所有舊的使用者訊息氣泡並隱藏其時間戳記
+                const oldTimes = document.querySelectorAll(".message-time");
+                oldTimes.forEach((time) => {
+                    time.remove(); // 直接移除時間元素
+                });
+
+                // 步驟 2: 呼叫新函式來創建使用者訊息氣泡，並設定 showTime 為 true
+                const userMessage = createMessage(messageText, "user", true);
+                chatTopic.appendChild(userMessage);
+
+                // 清空輸入框並重置高度
+                mainInput.value = "";
+                mainInput.style.height = "auto";
+
+                // 讓畫面自動滾動到最底部
+                chatTopic.scrollTop = chatTopic.scrollHeight;
+            });
+        </script>
+    </body>
+</html>
