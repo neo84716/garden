@@ -1,0 +1,63 @@
+.dislike-icon {
+    top: -40px;
+    left: 48px;
+    cursor: pointer;
+}
+
+.star-icon {
+    top: -40px;
+    left: calc(50% - 32px);
+    cursor: pointer;
+}
+
+.heart-icon {
+    top: -40px;
+    right: 48px;
+    cursor: pointer;
+}
+
+.icon-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.icon-visible {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.card-stack {
+    height: 614px;
+    position: relative;
+}
+
+.card {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center;
+}
+
+.card.animate-dislike {
+    transform: translateX(456px) rotate(8deg);
+    opacity: 0;
+}
+
+.jump-icon-box {
+    margin-top: 32px;
+    gap: 19px;
+}
+
+.jump-heart-icon,
+.jump-star-icon,
+.jump-dislike-icon {
+    opacity: 0;
+    transform: translateY(200px);
+}
+
+.jump-heart-icon.active,
+.jump-star-icon.active,
+.jump-dislike-icon.active {
+    opacity: 1;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.25, 1.5, 0.5, 1);
+}
