@@ -1,0 +1,25 @@
+.question-panel {
+    margin-bottom: 83px;
+    .title-number {
+        padding-left: 54.5px;
+        padding-right: 54.5px;
+    }
+
+    .player-info {
+        img {
+            width: 96px;
+
+            &.blur {
+                filter: blur(4px);
+            }
+        }
+    }
+}
+
+.score-bar {
+    background-color: rgba(236, 253, 245, 0.3);
+    width: 16px;
+    height: 252px;
+    border: 2px solid white;
+    border-radius: 8px;
+}

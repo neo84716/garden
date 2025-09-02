@@ -1,0 +1,92 @@
+.letter-0 {
+  letter-spacing: 0;
+}
+
+.letter-1 {
+  letter-spacing: 0.15px;
+}
+
+.letter-2 {
+  letter-spacing: 1px;
+}
+
+// header
+.member-body {
+ padding-bottom: 72px;
+}
+
+
+.member-header {
+  height: 48px;
+}
+
+.member-logo {
+  line-height: 0;
+}
+
+.member-logo a {
+  background-image: url(/assets/images/logo/logo-dark-h.svg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  width: 100px;
+  height: 17px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 0;
+}
+
+.gear-six {
+  margin-right: 14px;
+}
+
+// 資料設定
+.personal-info .btn {
+  padding: 8px;
+}
+
+// 資料設定 頭貼
+.personal-info .schedule {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 資料設定 升級Premium
+.premium {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-left: 8px;
+}
+
+.upgrade {
+  border-radius: 12px;
+}
+
+// 資料設定 生活照片
+.selfietitle .ph-fill {
+  color: $secondary-500;
+}
+
+.life-photo {
+  min-width: 100px;
+  border-radius: 8px;
+}
+
+.selfie .row {
+  margin-right: -6px !important; 
+  margin-left: -6px !important;
+}
+
+// 關於我
+.text-primary {
+  color: #101828;
+}
+
+// 學習語言
+.text-opacity-80 {
+  opacity: 0.8;
+}
