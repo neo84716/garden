@@ -42,11 +42,6 @@
     opacity: 0;
 }
 
-.jump-icon-box {
-    margin-top: 32px;
-    gap: 19px;
-}
-
 .jump-heart-icon,
 .jump-star-icon,
 .jump-dislike-icon {
@@ -60,4 +55,21 @@
     opacity: 1;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.6s cubic-bezier(0.25, 1.5, 0.5, 1);
+}
+
+.blur-1 {
+    filter: blur(1px);
+}
+
+#notifyBar-superlike,
+#notifyBar-miss {
+    top: -100px;
+    transition: top 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+#notifyBar-superlike.show,
+#notifyBar-miss.show {
+    top: 4px;
+    opacity: 1;
 }
