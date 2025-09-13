@@ -31,7 +31,10 @@
         <header class="chat-header fixed-top bg-white">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex align-items-center">
-                    <a class="btn text-neutral-950 border-0 lh-1 p-5" href="chat">
+                    <a
+                        class="btn text-neutral-950 border-0 lh-1 p-5"
+                        href="chat"
+                    >
                         <i class="ph ph-caret-left fs-6"></i>
                     </a>
                     <div class="d-flex">
@@ -62,7 +65,9 @@
                             </div>
                         </div>
                         <div>
-                            <h1 class="fs-9 letter-0 lh-base fw-semibold">
+                            <h1
+                                class="fs-9 letter-0 lh-base fw-semibold text-neutral-950"
+                            >
                                 Elena
                             </h1>
                             <div class="d-flex align-items-center">
@@ -92,7 +97,7 @@
             </div>
         </header>
 
-        <main class="chat-topic" style="padding-top: 56px">
+        <main class="chat-topic">
             <div class="px-6">
                 <div class="pt-6 border-top">
                     <div class="d-flex align-items-end gap-4 mb-9">
@@ -108,16 +113,22 @@
                         />
                         <div class="pe-13 dialog-box">
                             <div class="mb-4">
-                                <p class="message-box fs-10 letter-1">Hello!</p>
+                                <p
+                                    class="message-box fs-10 letter-1 text-neutral-950"
+                                >
+                                    Hello!
+                                </p>
                             </div>
                             <div class="mb-4">
-                                <p class="message-box fs-10 letter-1">
+                                <p
+                                    class="message-box fs-10 letter-1 text-neutral-950"
+                                >
                                     I'm excited to practice languages with you!
                                 </p>
                             </div>
                             <div class="d-flex flex-column">
                                 <p
-                                    class="message-box fs-10 letter-1 mb-4"
+                                    class="message-box fs-10 letter-1 mb-4 text-neutral-950"
                                     style="border-bottom-left-radius: 4px"
                                 >
                                     Hello! I'm excited to practice languages
@@ -178,12 +189,12 @@
                     </div>
                     <div class="d-flex align-items-center">
                         <div
-                            class="input-group flex-grow-1 bg-neutral-100 px-5 py-3"
+                            class="input-group flex-grow-1 bg-neutral-100 py-0 px-5 chat-input"
                             style="border-radius: 12px"
                         >
                             <textarea
                                 id="mainInput"
-                                class="form-control border-0 bg-transparent fs-10 letter-1 text-neutral-800 chat-input"
+                                class="form-control border-0 bg-transparent fs-10 letter-1 text-neutral-800"
                                 placeholder="輸入訊息"
                                 rows="1"
                                 style="resize: none; overflow-y: hidden"
@@ -226,7 +237,7 @@
         >
             <div class="modal-dialog modal-dialog-bottom">
                 <div
-                    class="modal-content rounded-top-4 border-0"
+                    class="modal-content border-0"
                     style="border-radius: 24px 24px 0 0"
                 >
                     <div
@@ -241,7 +252,7 @@
                             <i class="ph ph-x fs-6 p-5"></i>
                         </button>
                         <h2
-                            class="fs-8 fw-semibold lh-base letter-0 w-100 text-center m-0"
+                            class="fs-8 fw-semibold lh-base letter-0 w-100 text-center m-0 text-neutral-950"
                         >
                             主題話題
                         </h2>
@@ -370,17 +381,23 @@
                             </div>
                         </div>
                         <div
-                            class="input-group flex-grow-1 bg-neutral-100 p-5 mb-6"
+                            class="input-group flex-grow-1 bg-neutral-100 px-5 py-0 mb-6 d-flex align-items-center"
                             style="border-radius: 12px"
                         >
-                            <input
-                                type="text"
+                            <textarea
                                 id="questionInput"
-                                class="form-control border-0 bg-transparent p-0 fs-10 letter-1 text-neutral-800"
+                                class="form-control border-0 bg-transparent px-0 fs-10 letter-1 text-neutral-800"
                                 placeholder="How do you define a meaningful life?"
-                            />
+                                rows="1"
+                                style="
+                                    resize: none;
+                                    overflow-y: hidden;
+                                    padding-top: 12px;
+                                    padding-bottom: 15px;
+                                "
+                            ></textarea>
                             <div
-                                class="input-group-text p-0 m-0 bg-transparent border-0"
+                                class="input-group-text p-0 m-0 ms-4 bg-transparent border-0"
                             >
                                 <button
                                     class="btn btn-sm text-neutral-950 p-1 border-0"
@@ -393,7 +410,7 @@
                             <button
                                 id="confirmButton"
                                 class="btn text-white btn-primary-600 w-100 rounded-pill fw-semibold py-5 px-10 letter-0 border-0"
-                                style="max-width: 400px;"
+                                style="max-width: 400px"
                             >
                                 確認
                             </button>
@@ -456,112 +473,134 @@
 
             // 確認按鈕點擊事件 (將文字從彈出視窗轉移到主輸入框)
             confirmButton.addEventListener("click", function () {
-                // 將彈出視窗輸入框的值賦予給主畫面的輸入框
+                // 步驟 1: 將彈出視窗輸入框的值賦予給主畫面的輸入框
                 mainInput.value = questionInput.value;
 
-                // 創建並觸發 'input' 事件，以確保 textarea 自動擴展
+                // 步驟 2: 創建並觸發 'input' 事件，以確保 textarea 自動擴展
                 const event = new Event("input", {
                     bubbles: true,
                 });
                 mainInput.dispatchEvent(event);
 
-                // 隱藏彈出視窗
+                // 步驟 3: 隱藏彈出視窗
                 topicModal.hide();
             });
 
-            /**
-             * 創建一個訊息氣泡的 DOM 元素。
-             * @param {string} text - 訊息的文本內容。
-             * @param {string} sender - 訊息發送者 ("user" 或其他)。
-             * @param {boolean} showTime - 是否顯示時間戳記。
-             * @returns {HTMLElement} - 創建好的訊息氣泡 DOM 元素。
-             */
-            function createMessage(text, sender, showTime) {
-                // 創建最外層的容器 <div class="dialog-box mb-3">
-                const dialogBox = document.createElement("div");
-                dialogBox.classList.add("dialog-box", "mb-3", "ms-13");
+            // 讓輸入框高度根據內容自動調整
+            mainInput.addEventListener("input", function () {
+                this.style.height = "auto";
+                this.style.height = this.scrollHeight + "px";
+            });
 
-                // 創建訊息內容的 <p> 標籤
-                const messageParagraph = document.createElement("p");
-                messageParagraph.classList.add(
+            /**
+             * 創建使用者訊息區塊。
+             * @param {string} text - 使用者訊息的文本內容。
+             * @returns {HTMLElement} - 創建好的使用者訊息區塊 DOM 元素。
+             */
+            function createUserMessageBlock(text) {
+                const userMessageContainer = document.createElement("div");
+                userMessageContainer.classList.add(
+                    "dialog-box",
+                    "d-flex",
+                    "justify-content-end",
+                    "mb-4",
+                    "me-6",
+                    "ms-13"
+                );
+
+                const dialogBox = document.createElement("div");
+                dialogBox.classList.add(
+                    "d-flex",
+                    "flex-column",
+                    "align-items-end"
+                );
+
+                // 創建訊息氣泡
+                const messageBox = document.createElement("p");
+                messageBox.classList.add(
                     "message-box",
                     "fs-10",
                     "letter-1",
                     "mb-4"
                 );
-                messageParagraph.textContent = text;
+                messageBox.style.backgroundColor = "#D0FBE4";
+                messageBox.style.color = "#363A3F";
+                messageBox.style.borderBottomRightRadius = "4px";
+                messageBox.textContent = text;
+                dialogBox.appendChild(messageBox);
+                messageBox.style.maxWidth = "500px";
 
-                // 獲取當前時間並格式化
+                // 創建時間戳記
                 const now = new Date();
                 const hours = now.getHours();
                 const minutes = now.getMinutes();
-                const formattedTime = `下午${hours}:${
-                    minutes < 10 ? "0" : ""
-                }${minutes}`;
+                const formattedTime = `${hours >= 12 ? "下午" : "上午"}${
+                    hours > 12 ? hours - 12 : hours
+                }:${minutes < 10 ? "0" : ""}${minutes}`;
 
-                // 創建時間的 <time> 標籤
                 const timeElement = document.createElement("time");
                 timeElement.classList.add(
                     "text-neutral-600",
                     "fs-11",
                     "letter-1",
-                    "message-time" // 新增 class 以便後續選取
+                    "message-time"
                 );
                 timeElement.style.lineHeight = "1.4";
                 timeElement.textContent = formattedTime;
 
-                // 根據發送者決定樣式和結構
-                // 使用者訊息：靠右對齊，淺綠色氣泡
-                dialogBox.classList.add("d-flex", "justify-content-end");
-                messageParagraph.style.backgroundColor = "#6ee7b7"; // 自定義顏色
-                messageParagraph.style.borderBottomRightRadius = "4px";
+                dialogBox.appendChild(timeElement);
+                userMessageContainer.appendChild(dialogBox);
 
-                // 創建第二層的容器 <div class="d-flex flex-column">
-                const contentContainer = document.createElement("div");
-                contentContainer.classList.add(
-                    "d-flex",
-                    "flex-column",
-                    "me-6",
-                    "align-items-end"
-                );
-
-                // 將 p 標籤添加到第二層容器中
-                contentContainer.appendChild(messageParagraph);
-
-                // 根據 showTime 參數決定是否添加時間標籤
-                if (showTime) {
-                    contentContainer.appendChild(timeElement);
-                }
-
-                dialogBox.appendChild(contentContainer);
-
-                return dialogBox;
+                return userMessageContainer;
             }
 
-            // 發送按鈕點擊事件 (將文字顯示在對話視窗)
+            // 發送按鈕點擊事件
             sendButton.addEventListener("click", function () {
                 const messageText = mainInput.value.trim();
                 if (messageText === "") {
                     return;
                 }
 
-                // 步驟 1: 找到所有舊的使用者訊息氣泡並隱藏其時間戳記
+                // 移除舊的時間戳記
                 const oldTimes = document.querySelectorAll(".message-time");
                 oldTimes.forEach((time) => {
-                    time.remove(); // 直接移除時間元素
+                    time.remove();
                 });
 
-                // 步驟 2: 呼叫新函式來創建使用者訊息氣泡，並設定 showTime 為 true
-                const userMessage = createMessage(messageText, "user", true);
-                chatTopic.appendChild(userMessage);
+                // 創建並顯示使用者訊息區塊
+                const userMessageBlock = createUserMessageBlock(messageText);
+                chatTopic.appendChild(userMessageBlock);
 
                 // 清空輸入框並重置高度
                 mainInput.value = "";
                 mainInput.style.height = "auto";
 
-                // 讓畫面自動滾動到最底部
+                // 新增：讓畫面自動滾動到最底部
                 chatTopic.scrollTop = chatTopic.scrollHeight;
             });
+            // JavaScript 保持不變
+// 新增 setChatPadding() 函數
+function setChatPadding() {
+    const chatTopic = document.querySelector(".chat-topic");
+    const chatFooter = document.querySelector(".chat-footer");
+    const footerHeight = chatFooter.offsetHeight;
+    chatTopic.style.paddingBottom = `${footerHeight + 16}px`;
+}
+
+// 在適當的時機呼叫這個函數
+setChatPadding();
+
+mainInput.addEventListener("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+    setChatPadding();
+});
+
+sendButton.addEventListener("click", function () {
+    // ... (你的程式碼) ...
+    chatTopic.scrollTop = chatTopic.scrollHeight;
+    setChatPadding();
+});
         </script>
     </body>
 </html>
