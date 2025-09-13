@@ -7,50 +7,118 @@
 .chat-topic {
     max-width: 640px;
     margin: 0 auto;
-  
-  .dialog-box {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 56px;
+}
+
+.chat-topic .message-box {
+    border-radius: 12px;
+    padding: 8px 12px;
+    background-color: $secondary-100;
+    word-break: break-word; /* 使用這個屬性 */
+    display: inline-block;
+}
+
+
+/* 確保其他樣式正常運作 */
+.dialog-box {
     display: flex;
     flex-direction: column;
     max-width: 640px;
     min-width: 136px;
-  }
-
-  .message-box {
-    border-radius: 12px;
-    padding: 8px 12px;
-    background-color: $secondary-100;
-    display: inline-block; 
-  }
-
-} 
+}
 
 .modal-dialog-bottom {
-    position: absolute;
+    /* 統一使用 fixed 讓它固定在視窗底部 */
+    position: fixed;
     bottom: 0;
-    margin: 0;
-    max-width: 500px; 
-    margin: 0 auto;
     left: 0;
     right: 0;
+    margin: 0 auto; /* 確保水平置中 */
+    max-width: 640px;
+    width: 100%; /* 確保在小螢幕上可以填滿 */
+    transition: transform 0.3s ease-out; /* 統一動畫效果 */
+    pointer-events: none; /* 讓滑鼠點擊能夠穿透 */
 }
 
 .topic-card {
-  padding: 8px 0;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  border: 1px solid transparent;
-  background-color: transparent;
+    padding: 8px 0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    background-color: transparent;
 }
 
 .topic-card.topic-active-option,
 .topic-card:hover {
     background-color: $primary-50;
     border-color: $primary-600;
+    color: $primary-600;
 }
 
 .chat-input {
     display: flex;
     align-items: center;
     padding: 8px 12px;
-    line-height: normal;
+    line-height: 1.5;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.form-control {
+    /* 覆寫 Bootstrap 預設的 padding */
+    padding: 0;
+}
+
+.modal-backdrop.show {
+    opacity: 0.1;
+}
+
+/* 移除輸入框在點擊時的綠色外框 */
+.form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+//  Modal 滑入效果
+
+.modal-dialog.modal-dialog-bottom {
+    /* 設定 Modal 位於螢幕下方，並移除所有過渡效果 */
+    transform: translateY(100vh);
+    transition: none;
+}
+
+.modal.show .modal-dialog.modal-dialog-bottom {
+    /* 當 Modal 顯示時，以平滑的動畫回到原始位置 */
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade:not(.show) .modal-dialog-bottom {
+    transform: translateY(100vh);
+}
+
+.modal.show .modal-dialog-bottom {
+    transform: translateY(0);
+}
+
+.modal-content {
+    border-radius: 24px 24px 0 0;
+    pointer-events: auto; /* 恢復內容區的點擊 */
+}
+
+#mainInput {
+    /* 禁用使用者手動調整大小的功能 */
+    resize: none; 
+    /* 隱藏捲動條 */
+    overflow-y: hidden; 
+    /* 讓瀏覽器根據內容自動調整高度 */
+    height: auto; 
+     padding-top: 12px;
+    padding-bottom: 12px;
 }
