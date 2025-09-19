@@ -96,7 +96,7 @@
 .modal.show .modal-dialog.modal-dialog-bottom {
     /* 當 Modal 顯示時，以平滑的動畫回到原始位置 */
     transform: translateY(0);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-in;
 }
 
 .modal.fade:not(.show) .modal-dialog-bottom {
