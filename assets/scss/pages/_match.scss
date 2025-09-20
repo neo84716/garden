@@ -8,7 +8,7 @@
   .bg-match::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: -20px;
     background: 
       linear-gradient(0deg, rgba(54, 58, 63, 0.6), rgba(54, 58, 63, 0.6)), 
       url("/assets/images/avatar/lg/img_avatar_lg04.png") center/cover no-repeat;
