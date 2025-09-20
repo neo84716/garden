@@ -1,17 +1,17 @@
 .dislike-icon {
-    top: -40px;
+    top: 324px;
     left: 48px;
     cursor: pointer;
 }
 
 .star-icon {
-    top: -40px;
+    top: 324px;
     left: calc(50% - 32px);
     cursor: pointer;
 }
 
 .heart-icon {
-    top: -40px;
+    top: 324px;
     right: 48px;
     cursor: pointer;
 }
@@ -28,11 +28,12 @@
 }
 
 .card-stack {
-    height: 614px;
+    height: calc(100vh - 72px);
     position: relative;
 }
 
 .card {
+    height: 100%;
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform-origin: center;
 }
@@ -72,4 +73,15 @@
 #notifyBar-miss.show {
     top: 4px;
     opacity: 1;
+}
+
+.personal-box {
+    overflow-y: auto;
+    scrollbar-width: none;
+    transition: height 0.5s ease; 
+}
+
+/* 當我們不想要動畫時加這個 class */
+.no-transition {
+    transition: none !important;
 }
