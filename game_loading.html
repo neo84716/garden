@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="2;url=https://neo84716.github.io/garden/game_battle.html">
+    <meta http-equiv="refresh" content="5;url=https://neo84716.github.io/garden/game_battle.html">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link
@@ -17,8 +17,8 @@
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
 
     <title>配對對戰開始</title>
-  <script type="module" crossorigin src="/garden/assets/main-DBr8WQKQ.js"></script>
-  <link rel="stylesheet" crossorigin href="/garden/assets/main-hOQBuQMb.css">
+  <script type="module" crossorigin src="/garden/assets/main--B0X5Fbz.js"></script>
+  <link rel="stylesheet" crossorigin href="/garden/assets/main-DaZz8CcZ.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         <div class="container py-8 min-vh-100 d-flex flex-column justify-content-between">
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex flex-column justify-content-center align-items-center px-5">
+                    <div class="match-layout d-flex flex-column justify-content-center align-items-center px-5">
                         <div>
     <svg class="mb-11" width="194" height="48" viewBox="0 0 194 48" fill="none"
     xmlns="http://www.w3.org/2000/svg" width="192" height="53" viewBox="0 0 192 53" fill="none">
@@ -46,12 +46,13 @@
                                     <p class="h6 text-white fw-bold">You</p>
                                 </div>
                                 <div class="user-mask d-flex flex-column justify-content-center align-items-center">
-                                    <div class="image-container">
+                                    <div class="avatar-crop">
                                         <img src="/garden/assets/img_avatar_md17-BAGOkeBd.png" alt=""
-                                            class="user-img">
+                                            class="user-img rounded-circle mb-2">
                                     </div>
-                                    <p class="h6 text-white fw-bold mt-2">Unknown</p>
+                                    <p class="h6 text-white fw-bold">Unknown</p>
                                 </div>
+
                             </div>
                     </div>
                 </div>
@@ -60,7 +61,7 @@
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <img src="data:image/png;base64,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" alt="" class="img-loading">
             </div>
-
+            
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <a href="../pages/game.html" class="match-cancel text-white">取消配對</a>
             </div>
@@ -72,7 +73,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
         </script>
-
 </body>
 
 </html>
