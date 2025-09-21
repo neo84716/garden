@@ -18,8 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=translate" />
 
     <title>答題中</title>
-  <script type="module" crossorigin src="/garden/assets/main-BdV4vGh5.js"></script>
-  <link rel="stylesheet" crossorigin href="/garden/assets/main-EpFT_rAP.css">
+  <script type="module" crossorigin src="/garden/assets/main-DBr8WQKQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/garden/assets/main-hOQBuQMb.css">
 </head>
 
 <body>
@@ -27,25 +27,28 @@
     <div class="game_loading">
         <div class="container py-8">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 min-vh-100 d-flex flex-column justify-content-between">
                     <!-- 題目面板 -->
                     <div class="question-panel">
-                        <div class="player-info d-flex justify-content-center align-items-start mb-5">
+                        <div class="player-info d-flex justify-content-between align-items-start mb-5">
                             <div class="d-flex flex-column justify-content-center align-items-center"><img
-                                    src="/garden/assets/img_avatar_md16-D9v7I_3Y.png" alt="" class="rounded-circle">
+                                    src="/garden/assets/img_avatar_md16-D9v7I_3Y.png" alt=""
+                                    class="rounded-circle mb-2">
                                 <p class="fs-8 text-white">You</p>
                             </div>
                             <div class="title-number">
                                 <p class="h2 fw-bold text-white">10</p>
                             </div>
-                            <div class="d-flex flex-column justify-content-center align-items-center"><img
-                                    src="/garden/assets/img_avatar_md08-CtMxBpev.png" alt=""
-                                    class="rounded-circle blur">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div class="image_container">
+                                    <img src="/garden/assets/img_avatar_md08-CtMxBpev.png" alt=""
+                                        class="rounded-circle blur mb-2">
+                                </div>
                                 <p class="fs-8 text-white">Elena</p>
                             </div>
                         </div>
                         <div class="question-body d-flex flex-column justify-content-center align-items-center px-8">
-                            <div class="bedge bg-primary text-white fs-10 rounded-5 py-4 px-5 mb-5">節日</div>
+                            <div class="bedge bg-primary text-white fs-10 rounded-5 py-2 px-5 mb-5">節日</div>
                             <div class="d-flex justify-content-center align-items-center mb-5">
                                 <p class="h4 fw-bold text-white mb-0">第 1 題</p>
                                 <span
@@ -60,19 +63,21 @@
                     </div>
 
                     <!-- 答案面板 -->
-                    <div class="qnswer-panel">
+                    <div class="answer-panel">
                         <div class="d-flex align-items-end justify-content-center px-4">
-                            <div class="score-bar-container d-block flex-colcumn flex-wrap justigy-content-center">
+                            <div
+                                class="score-bar-container d-block flex-column flex-wrap justify-content-center flex-shrink-0">
                                 <p class="fs-8 text-center text-white mb-4">0</p>
                                 <div class="score-bar"></div>
                             </div>
-                            <div class="px-8">
-                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅卡</button>
-                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅利</button>
-                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅票</button>
-                                <button type="button" class="btn bg-white w-100 text-natural-950 rounded-5 p-5 mb-7">紅包</button>
+                            <div class="px-8 flex-grow-1">
+                                <button type="button" class="btn w-100 game_button wrong rounded-5 mb-6">紅卡</button>
+                                <button type="button" class="btn w-100 game_button wrong rounded-5 mb-6">紅利</button>
+                                <button type="button" class="btn w-100 game_button wrong rounded-5 mb-6">紅票</button>
+                                <button type="button" class="btn w-100 game_button correct rounded-5">紅包</button>
                             </div>
-                            <div class="score-bar-container d-block flex-colcumn flex-wrap justigy-content-center">
+                            <div
+                                class="score-bar-container d-block flex-column flex-wrap justify-content-center  flex-shrink-0">
                                 <p class="fs-8 text-center text-white mb-4">0</p>
                                 <div class="score-bar"></div>
                             </div>
@@ -88,53 +93,36 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script>
-        AOS.init();
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 24,
-            breakpoints: {
-                768: {
-                    slidesPerView: 1.7,
-                    spaceBetween: 16,
-                }
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
+        const gameLoading = document.querySelector('.game_loading');
+
+        // 正確答案
+        document.querySelectorAll('.game_button.correct').forEach(btn => {
+            btn.addEventListener('pointerup', () => {             // 用 pointerup 手機也適用
+                // 先把其他已標記的 done 清掉（避免同時有多個綠）
+                document.querySelectorAll('.game_button.done')
+                    .forEach(b => b.classList.remove('done'));
+
+                btn.classList.add('done');                           // 保留綠色
+                gameLoading.classList.add('answer-bingo');           // 外層加綠背景
+            });
         });
-        const Myswiper = new Swiper('.Myswiper', {
-            loop: true,
-            slidesPerView: 1.1,
-            spaceBetween: 24,
-            breakpoints: {
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 24,
-                }
-            },
-            pagination: { el: '.swiper-pagination' },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
-            }
+
+        // 錯誤答案
+        document.querySelectorAll('.game_button.wrong').forEach(btn => {
+            btn.addEventListener('pointerup', () => {
+                gameLoading.classList.remove('answer-bingo');        // 關掉外層綠背景
+
+                // 只移除 .done，不要移除 .correct（正確性是題目資料，不是狀態）
+                document.querySelectorAll('.game_button.done')
+                    .forEach(b => b.classList.remove('done'));
+
+                // 錯誤按鈕短暫顯示錯誤效果
+                btn.classList.add('done');
+                setTimeout(() => { btn.classList.remove('done'); }, 200);
+            });
         });
-        const marqueeSwiper = new Swiper(".MarqueeSwiper", {
-            slidesPerView: 'auto',
-            spaceBetween: 8,
-            loop: true,
-            freeMode: true,
-            speed: 6000,
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                768: {
-                    spaceBetween: 24,
-                }
-            },
-        });
+
+
     </script>
 </body>
 
