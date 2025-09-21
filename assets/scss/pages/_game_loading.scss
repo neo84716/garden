@@ -14,8 +14,9 @@
     }
 
     .match-layout {
-        
-        margin-bottom: 120.5px;
+
+        // margin-bottom: 120.5px;
+
         .user {
             height: 160px;
 
@@ -33,28 +34,81 @@
             .user-you {
                 position: absolute;
                 left: calc(50% - 116px);
-
             }
 
             .user-mask {
                 position: absolute;
                 left: calc(50% - 4px);
+
+                // 120 × 120 圓形裁切容器
+                .avatar-crop {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    // 讓裁切視窗內的內容水平置中、貼齊上方
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+
+                // Unknown 圖片放大到 152 × 152，並對齊「上方＋置中」
+                .avatar-crop .user-img {
+                    width: 152px;
+                    height: 152px;
+                    object-fit: cover; // 等比例填滿
+                    object-position: top center; // 保留上方與中間
+                    display: block;
+                }
+            }
+
+            // 其他 .user-img 保持 120 × 120（你原本的設定可留著）
+            .user-img {
+                width: 120px;
+                height: 120px;
+                max-width: none;
+                object-fit: cover;
+                display: block;
+                .image-container {
+                        width: 120px;
+                        height: 120px;
+                        overflow: hidden; // 裁切超過部分
+                        border-radius: 50%; // 保持圓形效果
+                        display: flex;
+                        justify-content: center; // 圖片水平居中
+                        align-items: center; // 圖片垂直居中
+                        // margin-bottom: 4px; // 圖片容器與下方文字的 4px 間距
+                    }
+                
+                    .user-img {
+                        width: 152px; // 放大到 152px
+                        height: 152px; // 放大到 152px
+                        object-fit: cover;
+                            /* 填滿容器，裁切多餘部分 */
+                            object-position: 50% 0; // 圖片頂部對齊容器頂部，水平居中
+                            transform: translateY(16px);
+                    }
             }
         }
     }
 
-    .match-cancel{
+    .match-cancel {
         display: block;
         cursor: pointer;
     }
 
-    &.answer-bingo{
-        background-color: rgba(0,128,0,0.3);
+    &.answer-bingo {
+        background-color: rgba($success-500, 0.3);
     }
-    
+
 }
 
 .img-loading {
     width: 48px;
-    margin-bottom: 120.5px;
+}
+
+
+img.blur {
+    filter: blur(4px);
 }
