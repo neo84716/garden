@@ -25,18 +25,19 @@
     <div class="game_loading">
         <div class="container py-8">
             <div class="row">
+                <div class="text-center mb-4">
+                    <%- include('./layout/win'); -%>
+                </div>
                 <div class="col-12 min-vh-100 d-flex flex-column justify-content-between">
-                    <!-- 題目面板 -->
-                    <div class="question-panel">
+
+                    <div class="question-panel mb-4">
                         <div class="player-info d-flex justify-content-between align-items-start mb-5">
                             <div class="d-flex flex-column justify-content-center align-items-center"><img
                                     src="../assets/images/avatar/md/img_avatar_md16.png" alt=""
                                     class="rounded-circle mb-2">
                                 <p class="fs-8 text-white">You</p>
                             </div>
-                            <div class="title-number">
-                                <p class="h2 fw-bold text-white">10</p>
-                            </div>
+
                             <div class="d-flex flex-column justify-content-center align-items-center">
                                 <div class="image_container">
                                     <img src="../assets/images/avatar/md/img_avatar_md08.png" alt=""
@@ -46,16 +47,13 @@
                             </div>
                         </div>
                         <div class="question-body d-flex flex-column justify-content-center align-items-center px-8">
-                            <div class="bedge bg-primary text-white fs-10 rounded-5 py-2 px-5 mb-5">節日</div>
+
                             <div class="d-flex justify-content-center align-items-center mb-5">
-                                <p class="h4 fw-bold text-white mb-0">第 1 題</p>
-                                <span
-                                    class="material-symbols-outlined rounded-circle bg-secondary-500 border-0 fs-9 text-white align-bottom p-2 ms-5">
-                                    translate
-                                </span>
+                                <p class="h4 fw-bold text-white mb-0">對戰結束！</p>
                             </div>
                             <div class="text">
-                                <p class="fs-7 text-white text-center">臺灣每年在農曆新年期間，會發給小朋友象徵祝福與好運的紅色信封叫什麼？</p>
+                                <p class="fs-7 text-white text-center">恭喜您挑戰成功<br>
+                                    太強啦！知識爆擊全場！</p>
                             </div>
                         </div>
                     </div>
@@ -64,15 +62,21 @@
                     <div class="answer-panel">
                         <div class="d-flex align-items-end justify-content-center px-4">
                             <div
-                                class="score-bar-container d-block flex-column flex-wrap justify-content-center flex-shrink-0">
-                                <p class="fs-8 text-center text-white mb-4">0</p>
+                                class="score-bar-container d-block flex-column flex-wrap justify-content-center align-items-center flex-shrink-0">
+                                <p class="fs-8 text-center text-white mb-4">80</p>
                                 <div class="score-bar"></div>
                             </div>
                             <div class="px-8 flex-grow-1">
-                                <button type="button" class="btn w-100 game_button wrong rounded-5 mb-6">紅卡</button>
-                                <button type="button" class="btn w-100 game_button wrong rounded-5 mb-6">紅利</button>
-                                <button type="button" class="btn w-100 game_button wrong rounded-5 mb-6">紅票</button>
-                                <button type="button" class="btn w-100 game_button correct rounded-5"><a href="game_win.html">紅包</a></button>
+                                <div class="win-message d-flex flex-column justify-content-center align-items-center">
+                                    <p class="text-white fs-8 mb-4">答對 3 題</p>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <img src="../assets/images/mission/img_mission_coin.png" alt="coin" width="16px"
+                                            class="align-center fs-9 me-2">
+                                        <span class="fs-7 fw-semibold text-white"> +4</span>
+                                    </div>
+                                </div>
+                                <button type="button"
+                                    class="btn w-100 game_button bg-primary-600 rounded-5 fw-semibold text-white">下一步</button>
                             </div>
                             <div
                                 class="score-bar-container d-block flex-column flex-wrap justify-content-center  flex-shrink-0">
