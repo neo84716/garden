@@ -1,9 +1,10 @@
-.btn-fixed{
+.btn-fixed {
     position: fixed;
     right: 16px;
     bottom: 88px;
     z-index: 10;
 }
+
 .bg-accent-800 {
     /* 上層白色 30% + 下層藍色漸層 */
     background:
@@ -76,4 +77,29 @@
         left: 16px;
         bottom: 12px;
     }
+}
+
+.btn.game_button {
+    background-color: #fff;
+    color: $neutral-950;
+    padding: 12px;
+
+    &:active {
+        background-color: $neutral-100;
+        opacity: 1;
+    }
+
+    &.correct.done {
+        background-color: $success-500;
+        color: #fff;
+    }
+
+    &.wrong.done {
+        background-color: $error-600;
+        color: #fff;
+    }
+}
+
+.game_loading.answer-bingo {
+    background-color: rgba($success-500, 0.3);
 }
